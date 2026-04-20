@@ -738,7 +738,7 @@ export default function Home() {
                 <button
                   type="submit"
                   disabled={submitStatus === 'loading'}
-                  className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-gray-400 text-white font-bold py-3 px-6 rounded-lg transition text-lg"
+                  className="w-full bg-amber-600 hover:bg-amber-700 disabled:bg-amber-600 disabled:opacity-70 disabled:cursor-not-allowed text-white font-bold py-3 px-6 rounded-lg transition text-lg"
                 >
                   {submitStatus === 'loading' ? 'Sending...' : 'Send Message'}
                 </button>
