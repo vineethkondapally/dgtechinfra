@@ -47,7 +47,9 @@ export async function POST(request: NextRequest) {
     }
 
     // Create transporter inside function to ensure fresh env vars
-    console.log('📧 Creating transporter with credentials configured');
+    console.log('📧 Creating transporter...');
+    console.log('EMAIL_USER:', process.env.EMAIL_USER);
+    console.log('EMAIL_PASSWORD exists:', !!process.env.EMAIL_PASSWORD);
     
     const transporter = nodemailer.createTransport({
       host: 'smtp.hostinger.com',
@@ -59,14 +61,27 @@ export async function POST(request: NextRequest) {
       },
       logger: true,
       debug: true,
-      connectionTimeout: 10000,
-      socketTimeout: 10000,
+      connectionTimeout: 15000,
+      socketTimeout: 15000,
     } as any);
 
-    // Email to your company
+    // Verify connection
+    console.log('🔍 Verifying SMTP connection...');
+    try {
+      await transporter.verify();
+      console.log('✓ SMTP connection verified');
+    } catch (verifyError) {
+      console.error('✗ SMTP verification failed:', verifyError);
+      return NextResponse.json(
+        { error: 'Email service configuration error. Please try again later.' },
+        { status: 500 }
+      );
+    }
+
+    // Email to your company (using authenticated email address)
     const companyMailOptions = {
-      from: 'info@dgtechinfra.com', // Must use authenticated email
-      to: 'contact@dgtechinfra.com',
+      from: process.env.EMAIL_USER || 'info@dgtechinfra.com',
+      to: process.env.EMAIL_USER || 'info@dgtechinfra.com', // Send to the authenticated email
       subject: `New Contact Form Submission from ${escapeHtml(name)}`,
       html: `
         <h2>New Contact Form Submission</h2>
@@ -80,7 +95,7 @@ export async function POST(request: NextRequest) {
 
     // Confirmation email to user
     const userMailOptions = {
-      from: 'info@dgtechinfra.com', // Must use authenticated email
+      from: process.env.EMAIL_USER || 'info@dgtechinfra.com',
       to: email,
       subject: 'We received your message - DHRITI Global',
       html: `
@@ -94,39 +109,32 @@ export async function POST(request: NextRequest) {
         <p>Best regards,<br>DHRITI Global Team</p>
         <p>📍 5, Nehru Outer Ring Road Sambhupur, Dundigal, Hyderabad, Telangana 500043</p>
         <p>📞 +91 9948146882</p>
-        <p>📧 contact@dgtechinfra.com</p>
+        <p>📧 info@dgtechinfra.com</p>
       `,
     };
 
-    // Helper function to send email with timeout
-    const sendEmailWithTimeout = (mailOptions: any, timeoutMs: number = 5000): Promise<any> => {
-      return Promise.race([
-        transporter.sendMail(mailOptions),
-        new Promise((_, reject) => 
-          setTimeout(() => reject(new Error(`Email send timeout after ${timeoutMs}ms`)), timeoutMs)
-        )
-      ]);
-    };
+    // Send company email first (wait for it to succeed)
+    console.log('📤 Sending company email...');
+    try {
+      await transporter.sendMail(companyMailOptions);
+      console.log('✓ Company email sent successfully');
+    } catch (companyEmailError) {
+      console.error('✗ Company email failed:', companyEmailError);
+      return NextResponse.json(
+        { error: 'Failed to send email. Please check your email address and try again.' },
+        { status: 500 }
+      );
+    }
 
-    // Send emails asynchronously (fire and forget) - don't await
-    // This allows the API to respond immediately
-    (async () => {
-      try {
-        await sendEmailWithTimeout(companyMailOptions);
-        console.log('✓ Company email sent successfully');
-      } catch (companyEmailError) {
-        console.error('✗ Company email failed:', companyEmailError);
-      }
+    // Send user confirmation email asynchronously (don't wait for it)
+    console.log('📤 Sending user confirmation email...');
+    transporter.sendMail(userMailOptions).then(() => {
+      console.log('✓ User confirmation email sent successfully');
+    }).catch((userEmailError) => {
+      console.error('✗ User confirmation email failed:', userEmailError);
+    });
 
-      try {
-        await sendEmailWithTimeout(userMailOptions);
-        console.log('✓ User confirmation email sent successfully');
-      } catch (userEmailError) {
-        console.error('✗ User confirmation email failed:', userEmailError);
-      }
-    })();
-
-    // Return response immediately without waiting for emails
+    // Return success response
     return NextResponse.json(
       { 
         success: true, 
