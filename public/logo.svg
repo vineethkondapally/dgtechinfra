@@ -1,0 +1,80 @@
+<svg width="280" height="80" viewBox="0 0 280 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <!-- Gradient Definitions -->
+    <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#0066FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0045CC;stop-opacity:1" />
+    </linearGradient>
+    
+    <linearGradient id="goldGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#FFD700;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#FFA500;stop-opacity:1" />
+    </linearGradient>
+    
+    <radialGradient id="bgGradient" cx="30%" cy="30%">
+      <stop offset="0%" style="stop-color:#F0F7FF;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#E0EEFF;stop-opacity:1" />
+    </radialGradient>
+    
+    <!-- Shadow filter -->
+    <filter id="shadow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="2" dy="2" stdDeviation="3" flood-opacity="0.15"/>
+    </filter>
+  </defs>
+  
+  <!-- Background with gradient -->
+  <rect width="280" height="80" fill="url(#bgGradient)" rx="10"/>
+  
+  <!-- Decorative accent bars -->
+  <rect x="0" y="0" width="280" height="3" fill="url(#blueGradient)" rx="10"/>
+  
+  <!-- Monogram Container with shadow -->
+  <g filter="url(#shadow)">
+    <!-- D - Bold geometric design -->
+    <g id="D-letter">
+      <circle cx="22" cy="40" r="16" fill="url(#blueGradient)"/>
+      <rect x="18" y="24" width="8" height="32" fill="url(#blueGradient)"/>
+      <circle cx="22" cy="40" r="10" fill="white"/>
+    </g>
+    
+    <!-- G - Modern design with accent -->
+    <g id="G-letter">
+      <circle cx="56" cy="40" r="16" fill="url(#goldGradient)"/>
+      <rect x="52" y="24" width="8" height="32" fill="url(#goldGradient)"/>
+      <circle cx="56" cy="40" r="10" fill="white"/>
+      <rect x="56" y="38" width="10" height="6" fill="url(#goldGradient)"/>
+    </g>
+  </g>
+  
+  <!-- Glow effect circles (subtle) -->
+  <circle cx="22" cy="40" r="18" fill="none" stroke="url(#blueGradient)" stroke-width="0.5" opacity="0.3"/>
+  <circle cx="56" cy="40" r="18" fill="none" stroke="url(#goldGradient)" stroke-width="0.5" opacity="0.3"/>
+  
+  <!-- Connecting line with gradient -->
+  <line x1="40" y1="40" x2="40" y2="40" stroke="url(#goldGradient)" stroke-width="2" opacity="0"/>
+  
+  <!-- Company Name - Bold Typography -->
+  <text x="78" y="32" font-family="'Segoe UI', 'Arial', sans-serif" font-size="16" font-weight="900" fill="#0033CC" letter-spacing="0.5">
+    DHRITI
+  </text>
+  <text x="160" y="32" font-family="'Segoe UI', 'Arial', sans-serif" font-size="16" font-weight="700" fill="#002299">
+    GLOBAL
+  </text>
+  
+  <!-- Subtitle with better styling -->
+  <text x="78" y="50" font-family="'Segoe UI', 'Arial', sans-serif" font-size="9" font-weight="600" fill="#FF9500" letter-spacing="0.8">
+    TECH • INFRA
+  </text>
+  
+  <!-- Accent dots -->
+  <circle cx="75" cy="42" r="1.5" fill="url(#goldGradient)"/>
+  <circle cx="270" cy="42" r="1.5" fill="url(#blueGradient)"/>
+  
+  <!-- Small decorative line under text -->
+  <line x1="78" y1="54" x2="150" y2="54" stroke="url(#goldGradient)" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Built for tagline - subtle -->
+  <text x="160" y="50" font-family="'Segoe UI', 'Arial', sans-serif" font-size="8" fill="#666666" font-style="italic" letter-spacing="0.3">
+    Next Generation
+  </text>
+</svg>

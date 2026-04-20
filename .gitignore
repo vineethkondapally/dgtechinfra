@@ -32,6 +32,7 @@ yarn-error.log*
 
 # env files (can opt-in for committing if needed)
 .env*
+!.env.example
 
 # vercel
 .vercel
@@ -39,3 +40,17 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# Test and temporary files
+test-email*.js
+test-*.js
+
+# Documentation/Setup files (development only)
+DEPLOYMENT_GUIDE.md
+HOSTING_GUIDE.md
+QUICK_START.md
+README_PROJECT.md
+START_HERE.txt
+DELIVERY_SUMMARY.txt
+DEPLOYMENT_CHECKLIST.md
+
