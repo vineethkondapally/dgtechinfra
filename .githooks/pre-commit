@@ -91,7 +91,7 @@ for file in $STAGED_FILES; do
     fi
     
     # Skip documentation files (they contain credential examples but are safe)
-    if [[ "$file" =~ \.(md|example)$ ]] || [[ "$file" =~ \.githooks ]]; then
+    if [[ "$file" =~ \.(md|example|txt)$ ]] || [[ "$file" =~ \.githooks ]]; then
         continue
     fi
     
