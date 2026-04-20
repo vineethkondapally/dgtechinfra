@@ -199,7 +199,8 @@ Last Commit Date:   April 20, 2026
    ```bash
    # Add to Hostinger environment:
    EMAIL_USER=info@dgtechinfra.com
-   EMAIL_PASSWORD="your-secure-password"
+   # Credentials stored in .env.local (never committed)
+   # Use your Hostinger email and secure password
    ```
 
 4. **Install & Build**
@@ -241,8 +242,7 @@ Last Commit Date:   April 20, 2026
 
 ```bash
 # MUST include quotes for special characters:
-EMAIL_PASSWORD="your-secure-password"  # ✅ CORRECT (quotes prevent # comment)
-EMAIL_PASSWORD=your-secure-password    # ❌ WRONG (# treated as comment)
+EMAIL_PASSWORD="your-secure-password"  # ✅ CORRECT (quotes required)
 ```
 
 ### ⚠️ Git Protection

@@ -211,9 +211,10 @@ git pull origin main
 ### Step 3: Set Environment Variables
 ```bash
 nano .env.local
-# Add:
-# EMAIL_USER=info@dgtechinfra.com
+# Add your Hostinger email credentials:
+# EMAIL_USER=your-email@yourdomain.com
 # EMAIL_PASSWORD="your-secure-password"
+# Note: Never commit .env.local to git
 ```
 
 ### Step 4: Install Dependencies
