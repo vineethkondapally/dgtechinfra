@@ -13,10 +13,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "DHRITI Global - Technology, Infrastructure & Industrial Solutions",
-  description: "Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance.",
-  keywords: "technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment",
+  metadataBase: new URL("https://dgtechinfra.com"),
+  title: "DHRITI Global - Technology, Infrastructure & Industrial Solutions | Hyderabad",
+  description: "Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance. Based in Hyderabad, serving globally.",
+  keywords: "technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment, Hyderabad, India",
   authors: [{ name: "DHRITI Global Technologies & Infrastructure Pvt Ltd" }],
+  creator: "DHRITI Global Technologies & Infrastructure Pvt Ltd",
+  publisher: "DHRITI Global Technologies & Infrastructure Pvt Ltd",
+  formatDetection: {
+    email: false,
+    address: false,
+    telephone: false,
+  },
   openGraph: {
     title: "DHRITI Global - Technology, Infrastructure & Industrial Solutions",
     description: "Multi-sector enterprise delivering integrated solutions across technology, infrastructure, manufacturing, and global trade.",
@@ -38,12 +46,24 @@ export const metadata: Metadata = {
     title: "DHRITI Global - Technology, Infrastructure & Industrial Solutions",
     description: "Integrated solutions across 15+ diverse sectors",
     images: ["https://dgtechinfra.com/og-image.png"],
+    creator: "@dgtechinfra",
   },
   robots: {
     index: true,
     follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+      "max-snippet": -1,
+      "max-image-preview": "large",
+      "max-video-preview": -1,
+    },
   },
   viewport: "width=device-width, initial-scale=1.0",
+  alternates: {
+    canonical: "https://dgtechinfra.com",
+  },
+  category: "Business Services",
 };
 
 export default function RootLayout({

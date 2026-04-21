@@ -48,6 +48,11 @@ test-*.js
 
 # Documentation/Setup files (development only)
 DEPLOYMENT_GUIDE.md
+
+# Deployment package folders (not needed in git, built locally)
+Files\ to\ upload/
+Files\ to\ upload-*/
+Files\ to\ upload*.zip
 HOSTING_GUIDE.md
 QUICK_START.md
 README_PROJECT.md
