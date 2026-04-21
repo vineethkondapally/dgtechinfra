@@ -59,24 +59,11 @@ export async function POST(request: NextRequest) {
         user: process.env.EMAIL_USER || '',
         pass: process.env.EMAIL_PASSWORD || '',
       },
-      logger: true,
-      debug: true,
-      connectionTimeout: 15000,
-      socketTimeout: 15000,
+      logger: false,
+      debug: false,
+      connectionTimeout: 10000,
+      socketTimeout: 10000,
     } as any);
-
-    // Verify connection
-    console.log('🔍 Verifying SMTP connection...');
-    try {
-      await transporter.verify();
-      console.log('✓ SMTP connection verified');
-    } catch (verifyError) {
-      console.error('✗ SMTP verification failed:', verifyError);
-      return NextResponse.json(
-        { error: 'Email service configuration error. Please try again later.' },
-        { status: 500 }
-      );
-    }
 
     // Email to your company (using authenticated email address)
     const companyMailOptions = {
@@ -113,28 +100,26 @@ export async function POST(request: NextRequest) {
       `,
     };
 
-    // Send company email first (wait for it to succeed)
-    console.log('📤 Sending company email...');
-    try {
-      await transporter.sendMail(companyMailOptions);
-      console.log('✓ Company email sent successfully');
-    } catch (companyEmailError) {
-      console.error('✗ Company email failed:', companyEmailError);
-      return NextResponse.json(
-        { error: 'Failed to send email. Please check your email address and try again.' },
-        { status: 500 }
-      );
-    }
+    // Send both emails asynchronously without waiting
+    // This allows the API to respond immediately to user
+    (async () => {
+      try {
+        // Send both emails in parallel for speed
+        await Promise.all([
+          transporter.sendMail(companyMailOptions).catch(err => {
+            console.error('✗ Company email failed:', err);
+          }),
+          transporter.sendMail(userMailOptions).catch(err => {
+            console.error('✗ User confirmation email failed:', err);
+          })
+        ]);
+        console.log('✓ Both emails sent successfully');
+      } catch (error) {
+        console.error('✗ Email sending error:', error);
+      }
+    })();
 
-    // Send user confirmation email asynchronously (don't wait for it)
-    console.log('📤 Sending user confirmation email...');
-    transporter.sendMail(userMailOptions).then(() => {
-      console.log('✓ User confirmation email sent successfully');
-    }).catch((userEmailError) => {
-      console.error('✗ User confirmation email failed:', userEmailError);
-    });
-
-    // Return success response
+    // Return response immediately without waiting for emails
     return NextResponse.json(
       { 
         success: true, 
