@@ -68,6 +68,9 @@ export const metadata: Metadata = {
     canonical: "https://dgtechinfra.com",
   },
   category: "Business Services",
+  verification: {
+    google: "googleef39532fea4ceb687",
+  },
 };
 
 export default function RootLayout({
