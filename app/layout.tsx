@@ -21,10 +21,14 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dgtechinfra.com"),
   title: "DG techinfra - Technology, Infrastructure & Industrial Solutions | Hyderabad",
   description: "Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance. Based in Hyderabad, serving globally.",
-  keywords: "technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment, Hyderabad, India",
-  authors: [{ name: "DHRITI Global Technologies & Infrastructure Pvt Ltd" }],
-  creator: "DHRITI Global Technologies & Infrastructure Pvt Ltd",
-  publisher: "DHRITI Global Technologies & Infrastructure Pvt Ltd",
+  keywords: "DG techinfra, technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment, Hyderabad, India",
+  authors: [{ name: "DG techinfra" }],
+  creator: "DG techinfra",
+  publisher: "DG techinfra",
+  icons: {
+    icon: "/favicon.svg",
+    apple: "/favicon.svg",
+  },
   formatDetection: {
     email: false,
     address: false,
@@ -37,10 +41,10 @@ export const metadata: Metadata = {
     siteName: "DG techinfra",
     images: [
       {
-        url: "https://dgtechinfra.com/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "DG techinfra",
+        url: "https://dgtechinfra.com/logo.svg",
+        width: 340,
+        height: 80,
+        alt: "DG techinfra logo",
       },
     ],
     locale: "en_US",
@@ -50,7 +54,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "DG techinfra - Technology, Infrastructure & Industrial Solutions",
     description: "Integrated solutions across 15+ diverse sectors",
-    images: ["https://dgtechinfra.com/og-image.png"],
+    images: ["https://dgtechinfra.com/logo.svg"],
     creator: "@dgtechinfra",
   },
   robots: {
@@ -70,6 +74,7 @@ export const metadata: Metadata = {
   category: "Business Services",
   other: {
     "google-site-verification": "googleef39532fea4ceb687",
+    "og:image": "https://dgtechinfra.com/logo.svg",
   },
 };
 

@@ -5,9 +5,9 @@ export const metadata: Metadata = {
     "schema:Organization": JSON.stringify({
       "@context": "https://schema.org",
       "@type": "Organization",
-      "name": "DHRITI Global Technologies & Infrastructure Pvt Ltd",
+      "name": "DG techinfra",
       "url": "https://dgtechinfra.com",
-      "logo": "https://dgtechinfra.com/logo.png",
+      "logo": "https://dgtechinfra.com/logo.svg",
       "description": "Integrated solutions across 15+ diverse sectors",
       "address": {
         "@type": "PostalAddress",
