@@ -421,7 +421,7 @@ export default function Home() {
           <div className="bg-white rounded-xl shadow-lg p-12 border-t-4 border-amber-600 mb-12">
             <div className="space-y-6">
               <p className="text-xl text-gray-800 leading-relaxed">
-                <span className="font-bold text-slate-900">Dhriti Global Technologies & Infrastructure Pvt Ltd</span> is a multi-sector enterprise delivering integrated solutions across technology, infrastructure, manufacturing, and global trade.
+                <span className="font-bold text-slate-900">DG techinfra</span> is a multi-sector enterprise delivering integrated solutions across technology, infrastructure, manufacturing, and global trade.
               </p>
 
               <p className="text-xl text-gray-800 leading-relaxed">
