@@ -84,16 +84,16 @@ export async function POST(request: NextRequest) {
     const userMailOptions = {
       from: process.env.EMAIL_USER || 'info@dgtechinfra.com',
       to: email,
-      subject: 'We received your message - DHRITI Global',
+      subject: 'We received your message - DG techinfra',
       html: `
-        <h2>Thank you for contacting DHRITI Global</h2>
+        <h2>Thank you for contacting DG techinfra</h2>
         <p>Dear ${escapeHtml(name)},</p>
         <p>We have received your message and will get back to you as soon as possible.</p>
         <hr>
         <p><strong>Your Message:</strong></p>
         <p>${escapeHtml(message).replace(/\n/g, '<br>')}</p>
         <hr>
-        <p>Best regards,<br>DHRITI Global Team</p>
+        <p>Best regards,<br>DG techinfra Team</p>
         <p>📍 5, Nehru Outer Ring Road Sambhupur, Dundigal, Hyderabad, Telangana 500043</p>
         <p>📞 +91 9948146882</p>
         <p>📧 info@dgtechinfra.com</p>

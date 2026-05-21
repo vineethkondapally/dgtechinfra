@@ -1,0 +1,22 @@
+<svg width="64" height="64" viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="faviconGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- Background -->
+  <rect width="64" height="64" fill="white"/>
+  
+  <!-- Hexagon shape (Navy) - centered and scaled for favicon -->
+  <polygon points="32,10 48,20 48,40 32,50 16,40 16,20" fill="url(#faviconGrad)"/>
+  
+  <!-- Inner hexagon (Gold accent) -->
+  <polygon points="32,16 44,24 44,40 32,48 20,40 20,24" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.7"/>
+  
+  <!-- DG Text inside hexagon -->
+  <text x="32" y="39" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.8">
+    DG
+  </text>
+</svg>

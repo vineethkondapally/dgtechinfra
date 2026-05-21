@@ -1,0 +1,45 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="v2grad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 5: Gear (Industrial/Manufacturing) + Circuit (Tech) -->
+  <!-- Represents: Manufacturing/Industrial capability merged with technology -->
+  
+  <!-- Large Gear (Navy) - Industrial capability -->
+  <circle cx="18" cy="18" r="12" fill="none" stroke="url(#v2grad2)" stroke-width="2.5"/>
+  <!-- Gear teeth -->
+  <rect x="15" y="1" width="6" height="4" fill="url(#v2grad2)"/>
+  <rect x="15" y="31" width="6" height="4" fill="url(#v2grad2)"/>
+  <rect x="1" y="15" width="4" height="6" fill="url(#v2grad2)"/>
+  <rect x="31" y="15" width="4" height="6" fill="url(#v2grad2)"/>
+  <circle cx="18" cy="18" r="5" fill="white"/>
+  
+  <!-- Circuit Board trace (Gold overlaid) -->
+  <polyline points="30,8 38,10 40,20 38,28 30,26" stroke="#FFD700" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <!-- Circuit nodes (Gold dots) -->
+  <circle cx="30" cy="8" r="2" fill="#FFD700"/>
+  <circle cx="38" cy="10" r="2" fill="#FFD700"/>
+  <circle cx="40" cy="20" r="2" fill="#FFD700"/>
+  <circle cx="38" cy="28" r="2" fill="#FFD700"/>
+  <circle cx="30" cy="26" r="2" fill="#FFD700"/>
+  
+  <!-- Connection lines -->
+  <line x1="26" y1="15" x2="30" y2="15" stroke="#FFD700" stroke-width="2" opacity="0.6" stroke-linecap="round"/>
+  
+  <!-- Company Name: DG techinfra -->
+  <text x="68" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#001f4d">
+    DG
+  </text>
+  <text x="100" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#001f4d">
+    techinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="68" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="0.5">
+    Industrial + Technology
+  </text>
+</svg>

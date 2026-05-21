@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Corporate Logo Concepts - DG techinfra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #001f4d;
+    }
+    
+    .header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    
+    .header p {
+      font-size: 16px;
+      color: #5a7a8f;
+    }
+    
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .concept-card {
+      background: white;
+      border-radius: 10px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      border-top: 4px solid #FFD700;
+    }
+    
+    .concept-card:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .concept-card h3 {
+      color: #001f4d;
+      margin-bottom: 10px;
+      font-size: 18px;
+    }
+    
+    .concept-card p {
+      color: #5a7a8f;
+      font-size: 13px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .logo-preview {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 20px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      min-height: 120px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-preview img {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .features {
+      list-style: none;
+      margin: 15px 0;
+    }
+    
+    .features li {
+      padding: 8px 0;
+      color: #333;
+      font-size: 13px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .features li:before {
+      content: "✓ ";
+      color: #FFD700;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      gap: 15px;
+      margin-top: 15px;
+      font-size: 12px;
+    }
+    
+    .rating-item {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 5px;
+    }
+    
+    .rating-label {
+      color: #5a7a8f;
+      margin-bottom: 5px;
+    }
+    
+    .rating-value {
+      color: #001f4d;
+      font-weight: bold;
+      font-size: 14px;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      background: white;
+      border-radius: 10px;
+      overflow: hidden;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    
+    .comparison-table table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, #001f4d 0%, #0a3f7f 100%);
+      color: white;
+      padding: 20px;
+      text-align: left;
+      font-weight: 700;
+    }
+    
+    .comparison-table td {
+      padding: 15px 20px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #333;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #5a7a8f;
+      font-size: 13px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>Corporate Logo Concepts</h1>
+      <p>Professional, Minimalist, Business-Focused Designs for DG techinfra</p>
+    </div>
+    
+    <div class="concepts-grid">
+      <!-- Concept 10: Wordmark with Underline -->
+      <div class="concept-card">
+        <h3>10. Modern Wordmark</h3>
+        <p>Clean typography with corporate underline accent</p>
+        <div class="logo-preview">
+          <svg width="240" height="60" viewBox="0 0 320 80">
+            <defs>
+              <linearGradient id="corpGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <text x="50" y="42" font-family="'Helvetica Neue', Arial" font-size="48" font-weight="900" fill="url(#corpGrad1)" letter-spacing="-2">DG</text>
+            <text x="110" y="42" font-family="'Helvetica Neue', Arial" font-size="28" font-weight="600" fill="#001f4d">techinfra</text>
+            <line x1="50" y1="50" x2="230" y2="50" stroke="url(#corpGrad1)" stroke-width="2"/>
+            <rect x="50" y="52" width="180" height="2" fill="#FFD700"/>
+            <rect x="42" y="32" width="2" height="28" fill="#FFD700" opacity="0.6"/>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Clean, professional typography</li>
+          <li>Perfect for corporate documents</li>
+          <li>Excellent readability at all sizes</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate Feel</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">7/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 11: Icon + Wordmark -->
+      <div class="concept-card">
+        <h3>11. Icon + Wordmark</h3>
+        <p>Nested squares representing layers and structure</p>
+        <div class="logo-preview">
+          <svg width="240" height="60" viewBox="0 0 320 80">
+            <defs>
+              <linearGradient id="corpGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+                <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect x="8" y="14" width="28" height="28" fill="none" stroke="url(#corpGrad2)" stroke-width="2" rx="2"/>
+            <rect x="14" y="20" width="16" height="16" fill="none" stroke="#FFD700" stroke-width="2" rx="1"/>
+            <rect x="18" y="24" width="8" height="8" fill="#FFD700" opacity="0.7" rx="1"/>
+            <line x1="45" y1="15" x2="45" y2="55" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/>
+            <text x="55" y="42" font-family="'Helvetica Neue', Arial" font-size="28" font-weight="700" fill="#001f4d">DG</text>
+            <text x="90" y="42" font-family="'Helvetica Neue', Arial" font-size="28" font-weight="600" fill="#001f4d">techinfra</text>
+            <line x1="55" y1="50" x2="280" y2="50" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Modern geometric icon</li>
+          <li>Shows stability and structure</li>
+          <li>Strong favicon potential</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate Feel</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">9/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 12: Minimal Geometric -->
+      <div class="concept-card">
+        <h3>12. Minimal Geometric</h3>
+        <p>Premium feel with horizontal accent lines</p>
+        <div class="logo-preview">
+          <svg width="240" height="60" viewBox="0 0 320 80">
+            <defs>
+              <linearGradient id="corpGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <line x1="8" y1="20" x2="28" y2="20" stroke="url(#corpGrad3)" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="8" y1="30" x2="28" y2="30" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/>
+            <line x1="8" y1="40" x2="28" y2="40" stroke="url(#corpGrad3)" stroke-width="2.5" stroke-linecap="round"/>
+            <rect x="35" y="20" width="1" height="20" fill="#FFD700" opacity="0.3"/>
+            <text x="50" y="44" font-family="'Helvetica Neue', Arial" font-size="34" font-weight="800" fill="url(#corpGrad3)" letter-spacing="-1.5">DG techinfra</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Minimalist, elegant design</li>
+          <li>Premium, luxury feel</li>
+          <li>Subtle geometric accent</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate Feel</div>
+            <div class="rating-value">10/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">6/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 13: Badge + Wordmark -->
+      <div class="concept-card">
+        <h3>13. Corporate Badge</h3>
+        <p>Professional badge with DG initials</p>
+        <div class="logo-preview">
+          <svg width="240" height="60" viewBox="0 0 320 80">
+            <defs>
+              <linearGradient id="corpGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+                <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+              </linearGradient>
+            </defs>
+            <rect x="8" y="14" width="32" height="32" fill="url(#corpGrad4)" rx="3"/>
+            <rect x="10" y="16" width="28" height="28" fill="none" stroke="white" stroke-width="1" opacity="0.3" rx="2"/>
+            <text x="24" y="40" font-family="'Helvetica Neue', Arial" font-size="20" font-weight="900" fill="white" text-anchor="middle">DG</text>
+            <rect x="36" y="38" width="6" height="8" fill="#FFD700"/>
+            <text x="55" y="44" font-family="'Helvetica Neue', Arial" font-size="32" font-weight="700" fill="#001f4d">techinfra</text>
+            <text x="24" y="52" font-family="'Helvetica Neue', Arial" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle">EST 2024</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Trustworthy badge design</li>
+          <li>Emphasizes brand identity</li>
+          <li>Perfect favicon option</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate Feel</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">10/10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Comparison Table -->
+    <div class="comparison-table">
+      <table>
+        <thead>
+          <tr>
+            <th>Aspect</th>
+            <th>Concept 10: Wordmark</th>
+            <th>Concept 11: Icon+Text</th>
+            <th>Concept 12: Minimal</th>
+            <th>Concept 13: Badge</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Style</strong></td>
+            <td>Traditional Corporate</td>
+            <td>Modern Professional</td>
+            <td>Premium Minimal</td>
+            <td>Trustworthy Badge</td>
+          </tr>
+          <tr>
+            <td><strong>Best For</strong></td>
+            <td>Traditional B2B, law firms</td>
+            <td>Tech-forward enterprises</td>
+            <td>Luxury/premium positioning</td>
+            <td>Corporate identity, trust</td>
+          </tr>
+          <tr>
+            <td><strong>Favicon Quality</strong></td>
+            <td>Good (text readable)</td>
+            <td>Excellent (icon clear)</td>
+            <td>Fair (too thin lines)</td>
+            <td>Excellent (badge iconic)</td>
+          </tr>
+          <tr>
+            <td><strong>Scalability</strong></td>
+            <td>Excellent</td>
+            <td>Excellent</td>
+            <td>Good</td>
+            <td>Excellent</td>
+          </tr>
+          <tr>
+            <td><strong>Memorability</strong></td>
+            <td>High (text-based)</td>
+            <td>Very High (icon)</td>
+            <td>Medium (subtle)</td>
+            <td>Very High (badge icon)</td>
+          </tr>
+          <tr>
+            <td><strong>Trademark Risk</strong></td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+            <td>Very Low</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="footer">
+      <p>All concepts are professionally designed, trademark-defensible, and ready for implementation.</p>
+      <p style="margin-top: 15px; color: #001f4d; font-weight: bold;">Which corporate concept resonates with you?</p>
+    </div>
+  </div>
+</body>
+</html>

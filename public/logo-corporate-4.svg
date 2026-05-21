@@ -1,0 +1,35 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="corpGrad4" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 13: Corporate Initial Badge + Wordmark -->
+  <!-- Represents: Professional, trustworthy, established -->
+  
+  <!-- Background badge shape -->
+  <rect x="8" y="14" width="32" height="32" fill="url(#corpGrad4)" rx="3"/>
+  
+  <!-- Inner border (lighter) -->
+  <rect x="10" y="16" width="28" height="28" fill="none" stroke="white" stroke-width="1" opacity="0.3" rx="2"/>
+  
+  <!-- DG Text inside badge -->
+  <text x="24" y="40" font-family="'Helvetica Neue', Arial, sans-serif" font-size="20" font-weight="900" fill="white" text-anchor="middle" letter-spacing="-1">
+    DG
+  </text>
+  
+  <!-- Gold accent corner -->
+  <rect x="36" y="38" width="6" height="8" fill="#FFD700"/>
+  
+  <!-- Company Name -->
+  <text x="55" y="44" font-family="'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#001f4d" letter-spacing="-0.5">
+    techinfra
+  </text>
+  
+  <!-- Small tag underneath badge -->
+  <text x="24" y="52" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle" letter-spacing="1">
+    EST 2024
+  </text>
+</svg>

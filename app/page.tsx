@@ -347,46 +347,19 @@ export default function Home() {
           <div className="flex justify-between items-center h-20">
             {/* Logo */}
             <div className="flex-shrink-0">
-              <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }}>
-                <svg width="450" height="100" viewBox="0 0 450 100" xmlns="http://www.w3.org/2000/svg" className="h-16 w-auto">
+              <a href="#" onClick={(e) => { e.preventDefault(); window.scrollTo({top: 0, behavior: 'smooth'}); }} className="cursor-pointer">
+                <svg width="240" height="60" viewBox="0 0 340 80" xmlns="http://www.w3.org/2000/svg" className="h-14 w-auto">
                   <defs>
-                    <linearGradient id="logoNavy" x1="0%" y1="0%" x2="0%" y2="100%">
+                    <linearGradient id="corp15grad" x1="0%" y1="0%" x2="100%" y2="100%">
                       <stop offset="0%" style={{stopColor:'#001f4d',stopOpacity:1}} />
                       <stop offset="100%" style={{stopColor:'#0a3f7f',stopOpacity:1}} />
                     </linearGradient>
-                    <linearGradient id="logoGold" x1="0%" y1="0%" x2="100%" y2="0%">
-                      <stop offset="0%" style={{stopColor:'#FFD700',stopOpacity:1}} />
-                      <stop offset="100%" style={{stopColor:'#FFA500',stopOpacity:1}} />
-                    </linearGradient>
                   </defs>
-                  
-                  {/* DG TECH INFRA - Modern Professional Logo */}
-                  
-                  {/* D Shape */}
-                  <path d="M 6 12 L 18 12 Q 32 12 32 42 Q 32 72 18 72 L 6 72 L 6 12 Z" fill="url(#logoNavy)"/>
-                  <path d="M 12 20 L 18 20 Q 27 20 27 42 Q 27 64 18 64 L 12 64 Z" fill="white" fillOpacity="0.08"/>
-                  
-                  {/* G Shape */}
-                  <path d="M 38 72 Q 24 72 24 42 Q 24 12 38 12 Q 50 12 54 22 L 42 22 Q 34 22 34 42 L 56 42 L 56 60 Q 56 72 38 72 Z" fill="url(#logoNavy)"/>
-                  <path d="M 28 20 L 52 20 Q 60 20 60 42 Q 60 64 46 64 L 28 64 Z" fill="white" fillOpacity="0.08"/>
-                  
-                  {/* Gold Swoosh */}
-                  <path d="M 16 16 Q 36 30 32 42 Q 29 56 14 68" stroke="url(#logoGold)" strokeWidth="8" fill="none" strokeLinecap="round"/>
-                  
-                  {/* DHRITI Text */}
-                  <text x="68" y="54" fontFamily="'Arial', 'Helvetica', sans-serif" fontSize="34" fontWeight="900" fill="#001f4d" letterSpacing="-0.5">
-                    DHRITI
-                  </text>
-                  
-                  {/* GLOBAL Text */}
-                  <text x="195" y="54" fontFamily="'Arial', 'Helvetica', sans-serif" fontSize="34" fontWeight="700" fill="#FFD700" letterSpacing="0.5">
-                    GLOBAL
-                  </text>
-                  
-                  {/* Tagline Line 1 */}
-                  <text x="68" y="72" fontFamily="'Arial', 'Helvetica', sans-serif" fontSize="12" fontWeight="600" fill="#5a7a8f" letterSpacing="0.8">
-                    TECHNOLOGIES &amp; INFRASTRUCTURE
-                  </text>
+                  <polygon points="24,8 38,16 38,32 24,40 10,32 10,16" fill="url(#corp15grad)"/>
+                  <polygon points="24,12 35,18 35,30 24,36 13,30 13,18" fill="none" stroke="#FFD700" strokeWidth="1" opacity="0.6"/>
+                  <text x="24" y="32" fontFamily="'Helvetica Neue', Arial, sans-serif" fontSize="16" fontWeight="800" fill="white" textAnchor="middle" letterSpacing="-0.5">DG</text>
+                  <text x="48" y="42" fontFamily="'Helvetica Neue', Arial, sans-serif" fontSize="32" fontWeight="700" fill="#001f4d" letterSpacing="-1.2">techinfra</text>
+                  <text x="48" y="60" fontFamily="'Helvetica Neue', Arial, sans-serif" fontSize="11" fontWeight="600" fill="#FFD700" letterSpacing="0.5">CONNECTING SOLUTIONS</text>
                 </svg>
               </a>
             </div>
@@ -443,7 +416,7 @@ export default function Home() {
       {/* ============= SECTION 2: ABOUT ============= */}
       <section id="about" className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-slate-50 to-slate-100">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-5xl font-bold text-slate-900 mb-12 text-center">About Dhriti Global</h2>
+          <h2 className="text-5xl font-bold text-slate-900 mb-12 text-center">About DG techinfra</h2>
 
           <div className="bg-white rounded-xl shadow-lg p-12 border-t-4 border-amber-600 mb-12">
             <div className="space-y-6">
@@ -521,7 +494,7 @@ export default function Home() {
       {/* ============= SECTION 4: WHY CHOOSE US ============= */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 to-slate-800 text-white">
         <div className="max-w-5xl mx-auto">
-          <h2 className="text-4xl font-bold mb-12 text-center">Why Choose DHRITI Global</h2>
+          <h2 className="text-4xl font-bold mb-12 text-center">Why Choose DG techinfra</h2>
           <div className="grid md:grid-cols-2 gap-8">
             {[
               { icon: TrendingUp, title: '16+ Years Experience', desc: 'Proven track record across multiple industries and sectors with sustainable growth' },
@@ -650,7 +623,7 @@ export default function Home() {
       {/* ============= SECTION 6: CTA ============= */}
       <section className="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 to-slate-800 text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h2 className="text-4xl font-bold mb-4">Ready to Partner with DHRITI Global?</h2>
+          <h2 className="text-4xl font-bold mb-4">Ready to Partner with DG techinfra?</h2>
           <p className="text-xl text-gray-300 mb-8">
             Let's discuss how our comprehensive solutions can drive your business forward
           </p>
@@ -754,7 +727,7 @@ export default function Home() {
           <div className="grid md:grid-cols-4 gap-8 mb-8">
             {/* Column 1: Brand */}
             <div>
-              <h4 className="font-bold text-white mb-4 text-lg">DHRITI GLOBAL</h4>
+              <h4 className="font-bold text-white mb-4 text-lg">DG techinfra</h4>
               <p className="text-sm">Integrated Technology, Infrastructure & Industrial Solutions</p>
             </div>
 

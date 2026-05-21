@@ -1,0 +1,643 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>All Corporate Logo Concepts - DG techinfra</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    
+    body {
+      font-family: 'Helvetica Neue', Arial, sans-serif;
+      background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+      padding: 40px 20px;
+      min-height: 100vh;
+    }
+    
+    .container {
+      max-width: 1400px;
+      margin: 0 auto;
+    }
+    
+    .header {
+      text-align: center;
+      margin-bottom: 50px;
+      color: #001f4d;
+    }
+    
+    .header h1 {
+      font-size: 42px;
+      margin-bottom: 10px;
+      font-weight: 800;
+    }
+    
+    .header p {
+      font-size: 16px;
+      color: #5a7a8f;
+      margin-bottom: 20px;
+    }
+    
+    .filter-tabs {
+      display: flex;
+      justify-content: center;
+      gap: 15px;
+      margin-bottom: 40px;
+      flex-wrap: wrap;
+    }
+    
+    .tab-btn {
+      padding: 12px 24px;
+      border: 2px solid #001f4d;
+      background: white;
+      color: #001f4d;
+      border-radius: 25px;
+      cursor: pointer;
+      font-weight: 600;
+      transition: all 0.3s ease;
+    }
+    
+    .tab-btn.active {
+      background: url('linear-gradient(135deg, #001f4d 0%, #0a3f7f 100%)');
+      background: linear-gradient(135deg, #001f4d 0%, #0a3f7f 100%);
+      color: white;
+      border-color: #001f4d;
+    }
+    
+    .tab-btn:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 5px 15px rgba(0, 31, 77, 0.2);
+    }
+    
+    .concepts-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+      margin-bottom: 50px;
+    }
+    
+    .concept-card {
+      background: white;
+      border-radius: 12px;
+      padding: 30px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
+      border-top: 5px solid #FFD700;
+      position: relative;
+    }
+    
+    .concept-card.featured {
+      box-shadow: 0 20px 60px rgba(255, 215, 0, 0.2);
+      transform: scale(1.02);
+    }
+    
+    .concept-card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 15px 50px rgba(0, 0, 0, 0.15);
+    }
+    
+    .concept-number {
+      position: absolute;
+      top: 15px;
+      right: 15px;
+      background: #FFD700;
+      color: #001f4d;
+      width: 35px;
+      height: 35px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-size: 16px;
+    }
+    
+    .concept-card h3 {
+      color: #001f4d;
+      margin-bottom: 8px;
+      font-size: 18px;
+      padding-right: 40px;
+    }
+    
+    .concept-card p {
+      color: #5a7a8f;
+      font-size: 13px;
+      margin-bottom: 20px;
+      line-height: 1.6;
+    }
+    
+    .logo-preview {
+      background: #f9f9f9;
+      border-radius: 8px;
+      padding: 25px;
+      margin-bottom: 20px;
+      text-align: center;
+      border: 1px solid #e0e0e0;
+      min-height: 140px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .logo-preview svg {
+      max-width: 100%;
+      max-height: 100%;
+      object-fit: contain;
+    }
+    
+    .features {
+      list-style: none;
+      margin: 15px 0;
+    }
+    
+    .features li {
+      padding: 8px 0;
+      color: #333;
+      font-size: 13px;
+      border-bottom: 1px solid #f0f0f0;
+    }
+    
+    .features li:last-child {
+      border-bottom: none;
+    }
+    
+    .features li:before {
+      content: "✓ ";
+      color: #FFD700;
+      font-weight: bold;
+      margin-right: 8px;
+    }
+    
+    .rating {
+      display: flex;
+      justify-content: space-between;
+      gap: 12px;
+      margin-top: 15px;
+      font-size: 11px;
+    }
+    
+    .rating-item {
+      flex: 1;
+      text-align: center;
+      padding: 10px;
+      background: #f0f0f0;
+      border-radius: 5px;
+      border-left: 3px solid #FFD700;
+    }
+    
+    .rating-label {
+      color: #5a7a8f;
+      margin-bottom: 5px;
+      font-weight: 600;
+    }
+    
+    .rating-value {
+      color: #001f4d;
+      font-weight: bold;
+      font-size: 13px;
+    }
+    
+    .badge {
+      display: inline-block;
+      background: #FFD700;
+      color: #001f4d;
+      padding: 4px 12px;
+      border-radius: 20px;
+      font-size: 11px;
+      font-weight: 700;
+      margin-top: 10px;
+    }
+    
+    .comparison-section {
+      background: white;
+      border-radius: 12px;
+      padding: 40px;
+      box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+      margin-top: 50px;
+    }
+    
+    .comparison-section h2 {
+      color: #001f4d;
+      margin-bottom: 30px;
+      font-size: 28px;
+    }
+    
+    .comparison-table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+    
+    .comparison-table th {
+      background: linear-gradient(135deg, #001f4d 0%, #0a3f7f 100%);
+      color: white;
+      padding: 15px;
+      text-align: left;
+      font-weight: 700;
+      font-size: 13px;
+    }
+    
+    .comparison-table td {
+      padding: 12px 15px;
+      border-bottom: 1px solid #e0e0e0;
+      color: #333;
+      font-size: 13px;
+    }
+    
+    .comparison-table tr:last-child td {
+      border-bottom: none;
+    }
+    
+    .comparison-table tr:nth-child(even) {
+      background: #f9f9f9;
+    }
+    
+    .score {
+      font-weight: 700;
+      color: #001f4d;
+    }
+    
+    .footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #5a7a8f;
+      font-size: 14px;
+    }
+    
+    .footer p {
+      margin: 10px 0;
+    }
+    
+    .top-picks {
+      background: linear-gradient(135deg, #FFD700 0%, #FFC107 100%);
+      color: #001f4d;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+      font-weight: 600;
+      text-align: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="header">
+      <h1>🏢 Corporate Logo Concepts</h1>
+      <p>Professional, Minimalist, Business-Focused Designs for DG techinfra</p>
+      <p style="font-size: 14px; color: #FFD700; margin-top: 10px;">✓ 8 Corporate Concepts Ready for Review</p>
+    </div>
+    
+    <div class="filter-tabs">
+      <button class="tab-btn active" onclick="filterByType('all')">All Concepts</button>
+      <button class="tab-btn" onclick="filterByType('badge')">Badge Style</button>
+      <button class="tab-btn" onclick="filterByType('wordmark')">Wordmark Style</button>
+      <button class="tab-btn" onclick="filterByType('geometric')">Geometric</button>
+    </div>
+    
+    <div class="top-picks">
+      ⭐ User Favorites: Concepts #12 (Minimal) & #13 (Badge) — Building upon these styles...
+    </div>
+    
+    <div class="concepts-grid" id="conceptsGrid">
+      <!-- Concept 10 -->
+      <div class="concept-card" data-type="wordmark">
+        <div class="concept-number">10</div>
+        <h3>Modern Wordmark</h3>
+        <p>Clean typography with gold underline</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg10" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <text x="50" y="42" font-family="Helvetica Neue, Arial" font-size="48" font-weight="900" fill="url(#cg10)" letter-spacing="-2">DG</text>
+            <text x="110" y="42" font-family="Helvetica Neue, Arial" font-size="28" font-weight="600" fill="#001f4d">techinfra</text>
+            <line x1="50" y1="50" x2="230" y2="50" stroke="url(#cg10)" stroke-width="2"/><rect x="50" y="52" width="180" height="2" fill="#FFD700"/><rect x="42" y="32" width="2" height="28" fill="#FFD700" opacity="0.6"/>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Traditional corporate feel</li>
+          <li>Excellent readability</li>
+          <li>Perfect for documents</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">7/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 11 -->
+      <div class="concept-card" data-type="geometric">
+        <div class="concept-number">11</div>
+        <h3>Icon + Wordmark</h3>
+        <p>Nested squares showing structure</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg11" x1="0%" y1="0%" x2="100%" y2="0%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <rect x="8" y="14" width="28" height="28" fill="none" stroke="url(#cg11)" stroke-width="2" rx="2"/><rect x="14" y="20" width="16" height="16" fill="none" stroke="#FFD700" stroke-width="2" rx="1"/><rect x="18" y="24" width="8" height="8" fill="#FFD700" opacity="0.7" rx="1"/><line x1="45" y1="15" x2="45" y2="55" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/><text x="55" y="42" font-family="Helvetica Neue, Arial" font-size="28" font-weight="700" fill="#001f4d">DG</text><text x="90" y="42" font-family="Helvetica Neue, Arial" font-size="28" font-weight="600" fill="#001f4d">techinfra</text><line x1="55" y1="50" x2="280" y2="50" stroke="#FFD700" stroke-width="3" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Modern geometric icon</li>
+          <li>Strong favicon potential</li>
+          <li>Tech-forward positioning</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">9/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 12 -->
+      <div class="concept-card featured" data-type="wordmark">
+        <div class="concept-number">12</div>
+        <h3>⭐ Minimal Geometric</h3>
+        <p>Premium minimalist design</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg12" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <line x1="8" y1="20" x2="28" y2="20" stroke="url(#cg12)" stroke-width="2.5" stroke-linecap="round"/><line x1="8" y1="30" x2="28" y2="30" stroke="#FFD700" stroke-width="2.5" stroke-linecap="round"/><line x1="8" y1="40" x2="28" y2="40" stroke="url(#cg12)" stroke-width="2.5" stroke-linecap="round"/><rect x="35" y="20" width="1" height="20" fill="#FFD700" opacity="0.3"/><text x="50" y="44" font-family="Helvetica Neue, Arial" font-size="34" font-weight="800" fill="url(#cg12)" letter-spacing="-1.5">DG techinfra</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Most elegant design</li>
+          <li>Premium luxury feel</li>
+          <li>Timeless aesthetic</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">10/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">6/10</div>
+          </div>
+        </div>
+        <span class="badge">USER FAVORITE</span>
+      </div>
+      
+      <!-- Concept 13 -->
+      <div class="concept-card featured" data-type="badge">
+        <div class="concept-number">13</div>
+        <h3>⭐ Corporate Badge</h3>
+        <p>Professional authority badge</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg13" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <rect x="8" y="14" width="32" height="32" fill="url(#cg13)" rx="3"/><rect x="10" y="16" width="28" height="28" fill="none" stroke="white" stroke-width="1" opacity="0.3" rx="2"/><text x="24" y="40" font-family="Helvetica Neue, Arial" font-size="20" font-weight="900" fill="white" text-anchor="middle">DG</text><rect x="36" y="38" width="6" height="8" fill="#FFD700"/><text x="55" y="44" font-family="Helvetica Neue, Arial" font-size="32" font-weight="700" fill="#001f4d">techinfra</text><text x="24" y="52" font-family="Helvetica Neue, Arial" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle">EST 2024</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Trustworthy badge</li>
+          <li>Perfect favicon match</li>
+          <li>Establishes authority</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">10/10</div>
+          </div>
+        </div>
+        <span class="badge">USER FAVORITE</span>
+      </div>
+      
+      <!-- Concept 14 -->
+      <div class="concept-card" data-type="geometric">
+        <div class="concept-number">14</div>
+        <h3>Circular Badge</h3>
+        <p>Modern circular unified design</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg14" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <circle cx="24" cy="30" r="18" fill="url(#cg14)"/><circle cx="24" cy="30" r="14" fill="none" stroke="#FFD700" stroke-width="1.5"/><text x="24" y="35" font-family="Helvetica Neue, Arial" font-size="18" font-weight="800" fill="white" text-anchor="middle">DG</text><circle cx="16" cy="54" r="1.5" fill="#FFD700"/><circle cx="24" cy="54" r="1.5" fill="#FFD700"/><circle cx="32" cy="54" r="1.5" fill="#FFD700"/><text x="55" y="42" font-family="Helvetica Neue, Arial" font-size="30" font-weight="700" fill="#001f4d">techinfra</text><text x="55" y="58" font-family="Helvetica Neue, Arial" font-size="10" font-weight="600" fill="#FFD700" letter-spacing="1">CONNECTED SOLUTIONS</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Modern circular form</li>
+          <li>Represents unity</li>
+          <li>Tech connectivity</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">8/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">9/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 15 -->
+      <div class="concept-card" data-type="geometric">
+        <div class="concept-number">15</div>
+        <h3>Hexagon Badge</h3>
+        <p>Structured hexagon premium</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg15" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <polygon points="24,8 38,16 38,32 24,40 10,32 10,16" fill="url(#cg15)"/><polygon points="24,12 35,18 35,30 24,36 13,30 13,18" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.6"/><text x="24" y="32" font-family="Helvetica Neue, Arial" font-size="16" font-weight="800" fill="white" text-anchor="middle">DG</text><text x="55" y="42" font-family="Helvetica Neue, Arial" font-size="30" font-weight="700" fill="#001f4d">techinfra</text><line x1="50" y1="50" x2="180" y2="50" stroke="#FFD700" stroke-width="1.5" stroke-dasharray="3,3" opacity="0.7"/><text x="55" y="65" font-family="Helvetica Neue, Arial" font-size="9" font-weight="700" fill="#001f4d" letter-spacing="1">INFRASTRUCTURE EXCELLENCE</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Geometric hexagon</li>
+          <li>Premium structure</li>
+          <li>Modern stability</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">8/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 16 -->
+      <div class="concept-card" data-type="geometric">
+        <div class="concept-number">16</div>
+        <h3>Diamond Monogram</h3>
+        <p>Sophisticated premium style</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg16" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <polygon points="24,6 42,24 24,42 6,24" fill="url(#cg16)"/><polygon points="24,11 37,24 24,37 11,24" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.5"/><text x="24" y="29" font-family="Helvetica Neue, Arial" font-size="14" font-weight="900" fill="white" text-anchor="middle">DG</text><text x="55" y="42" font-family="Helvetica Neue, Arial" font-size="32" font-weight="800" fill="#001f4d" letter-spacing="-1">techinfra</text><line x1="55" y1="48" x2="155" y2="48" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Premium sophisticated</li>
+          <li>Diamond elegance</li>
+          <li>Established authority</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">9/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">7/10</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- Concept 17 -->
+      <div class="concept-card" data-type="geometric">
+        <div class="concept-number">17</div>
+        <h3>Dynamic Square</h3>
+        <p>Modern tech-powered design</p>
+        <div class="logo-preview">
+          <svg width="260" height="70" viewBox="0 0 320 80">
+            <defs><linearGradient id="cg17" x1="0%" y1="0%" x2="100%" y2="100%"><stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" /><stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" /></linearGradient></defs>
+            <rect x="8" y="14" width="32" height="32" fill="url(#cg17)" rx="4"/><g transform="translate(24, 30)"><polygon points="0,-9 9,0 0,9 -9,0" fill="none" stroke="#FFD700" stroke-width="1.5" opacity="0.7"/></g><text x="24" y="36" font-family="Helvetica Neue, Arial" font-size="18" font-weight="900" fill="white" text-anchor="middle">DG</text><text x="55" y="42" font-family="Helvetica Neue, Arial" font-size="30" font-weight="700" fill="#001f4d">techinfra</text><circle cx="58" cy="58" r="1.5" fill="#FFD700"/><line x1="62" y1="58" x2="72" y2="58" stroke="#FFD700" stroke-width="1.5" stroke-linecap="round"/><text x="80" y="62" font-family="Helvetica Neue, Arial" font-size="9" font-weight="600" fill="#FFD700">POWERED</text>
+          </svg>
+        </div>
+        <ul class="features">
+          <li>Dynamic, modern feel</li>
+          <li>Tech-powered messaging</li>
+          <li>Rotated inner accent</li>
+        </ul>
+        <div class="rating">
+          <div class="rating-item">
+            <div class="rating-label">Corporate</div>
+            <div class="rating-value">8/10</div>
+          </div>
+          <div class="rating-item">
+            <div class="rating-label">Favicon</div>
+            <div class="rating-value">8/10</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Comparison Section -->
+    <div class="comparison-section">
+      <h2>📊 Quick Comparison</h2>
+      <table class="comparison-table">
+        <thead>
+          <tr>
+            <th>Concept</th>
+            <th>Style</th>
+            <th>Best For</th>
+            <th>Corporate</th>
+            <th>Favicon</th>
+            <th>Recommendation</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>10</strong></td>
+            <td>Traditional Wordmark</td>
+            <td>Law firms, consultants</td>
+            <td class="score">9/10</td>
+            <td class="score">7/10</td>
+            <td>Professional, classic</td>
+          </tr>
+          <tr>
+            <td><strong>11</strong></td>
+            <td>Modern Icon + Text</td>
+            <td>Tech enterprises</td>
+            <td class="score">9/10</td>
+            <td class="score">9/10</td>
+            <td>Balanced approach</td>
+          </tr>
+          <tr style="background: #FFD700; color: #001f4d;">
+            <td><strong>12 ⭐</strong></td>
+            <td>Minimal Geometric</td>
+            <td>Premium positioning</td>
+            <td class="score">10/10</td>
+            <td class="score">6/10</td>
+            <td>Most elegant, timeless</td>
+          </tr>
+          <tr style="background: #FFD700; color: #001f4d;">
+            <td><strong>13 ⭐</strong></td>
+            <td>Corporate Badge</td>
+            <td>Established authority</td>
+            <td class="score">9/10</td>
+            <td class="score">10/10</td>
+            <td>Perfect favicon option</td>
+          </tr>
+          <tr>
+            <td><strong>14</strong></td>
+            <td>Circular Badge</td>
+            <td>Modern tech companies</td>
+            <td class="score">8/10</td>
+            <td class="score">9/10</td>
+            <td>Unity, connectivity</td>
+          </tr>
+          <tr>
+            <td><strong>15</strong></td>
+            <td>Hexagon Badge</td>
+            <td>Infrastructure focus</td>
+            <td class="score">9/10</td>
+            <td class="score">8/10</td>
+            <td>Structured, modern</td>
+          </tr>
+          <tr>
+            <td><strong>16</strong></td>
+            <td>Diamond Monogram</td>
+            <td>Luxury/premium</td>
+            <td class="score">9/10</td>
+            <td class="score">7/10</td>
+            <td>Sophisticated elegance</td>
+          </tr>
+          <tr>
+            <td><strong>17</strong></td>
+            <td>Dynamic Square</td>
+            <td>Tech-forward brand</td>
+            <td class="score">8/10</td>
+            <td class="score">8/10</td>
+            <td>Innovation focused</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    
+    <div class="footer">
+      <p><strong>Your Top Options:</strong></p>
+      <p>🥇 <strong>Most Corporate:</strong> #12 (Minimal) or #13 (Badge)</p>
+      <p>🥈 <strong>Best Favicon:</strong> #13 (Badge) or #14 (Circular)</p>
+      <p>🥉 <strong>Best Modern:</strong> #15 (Hexagon) or #17 (Dynamic Square)</p>
+      <p style="margin-top: 30px; font-weight: bold; color: #001f4d;">Which concept would you like to implement?</p>
+    </div>
+  </div>
+  
+  <script>
+    function filterByType(type) {
+      const cards = document.querySelectorAll('.concept-card');
+      const buttons = document.querySelectorAll('.tab-btn');
+      
+      buttons.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      cards.forEach(card => {
+        if (type === 'all' || card.dataset.type === type) {
+          card.style.display = 'block';
+        } else {
+          card.style.display = 'none';
+        }
+      });
+    }
+  </script>
+</body>
+</html>
