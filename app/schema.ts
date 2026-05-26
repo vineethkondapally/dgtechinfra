@@ -6,6 +6,7 @@ export const metadata: Metadata = {
       "@context": "https://schema.org",
       "@type": "Organization",
       "name": "DG techinfra",
+      "alternateName": "dgtechinfra",
       "url": "https://dgtechinfra.com",
       "logo": "https://dgtechinfra.com/logo.svg",
       "description": "Integrated solutions across 15+ diverse sectors",

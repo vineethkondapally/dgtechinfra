@@ -398,7 +398,8 @@ export default function Home() {
       {/* ============= SECTION 1: HERO ============= */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 to-slate-800 text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-6">Powering Technology, Infrastructure & Industrial Growth</h1>
+          <h1 className="text-5xl md:text-6xl font-bold mb-2">dgtechinfra</h1>
+          <p className="text-2xl md:text-3xl font-semibold text-amber-400 mb-6">Powering Technology, Infrastructure & Industrial Growth</p>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance.
           </p>

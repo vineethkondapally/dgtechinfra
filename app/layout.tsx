@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   metadataBase: new URL("https://dgtechinfra.com"),
   title: "DG techinfra - Technology, Infrastructure & Industrial Solutions | Hyderabad",
   description: "Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance. Based in Hyderabad, serving globally.",
-  keywords: "DG techinfra, technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment, Hyderabad, India",
+  keywords: "dgtechinfra, DG techinfra, technology solutions, infrastructure projects, manufacturing, real estate, agriculture technology, import export, retail systems, education, recruitment, Hyderabad, India, enterprise solutions",
   authors: [{ name: "DG techinfra" }],
   creator: "DG techinfra",
   publisher: "DG techinfra",
