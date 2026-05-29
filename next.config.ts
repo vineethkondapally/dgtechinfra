@@ -1,14 +1,6 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  redirects: async () => [
-    // Redirect to canonical URL with trailing slash
-    {
-      source: '/:path((?!_next|favicon.svg|robots.txt|sitemap.xml|google.*|public).*)',
-      destination: '/:path/',
-      permanent: false,
-    },
-  ],
   headers: async () => [
     {
       source: '/:path*',
