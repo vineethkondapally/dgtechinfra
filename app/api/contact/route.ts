@@ -95,7 +95,7 @@ export async function POST(request: NextRequest) {
         <hr>
         <p>Best regards,<br>DG techinfra Team</p>
         <p>📍 5, Nehru Outer Ring Road Sambhupur, Dundigal, Hyderabad, Telangana 500043</p>
-        <p>📞 +91 9948146882</p>
+        <p>📞 +91 7396146882</p>
         <p>📧 info@dgtechinfra.com</p>
       `,
     };

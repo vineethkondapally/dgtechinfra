@@ -761,7 +761,7 @@ export default function Home() {
               <h4 className="font-bold text-white mb-4">Contact</h4>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-amber-600" /> 5, Nehru Outer Ring Road Sambhupur, Dundigal, Hyderabad, Telangana 500043</p>
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber-600" /> +91 9948146882</p>
+                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber-600" /> +91 7396146882</p>
                 <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-amber-600" /> contact@dgtechinfra.com</p>
               </div>
             </div>

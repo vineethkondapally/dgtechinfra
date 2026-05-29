@@ -21,7 +21,7 @@ export const metadata: Metadata = {
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "Customer Service",
-        "telephone": "+91-9948146882",
+        "telephone": "+91-7396146882",
         "email": "contact@dgtechinfra.com"
       },
       "sameAs": [

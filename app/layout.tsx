@@ -60,12 +60,14 @@ export const metadata: Metadata = {
   robots: {
     index: true,
     follow: true,
+    nocache: false,
     googleBot: {
       index: true,
       follow: true,
       "max-snippet": -1,
       "max-image-preview": "large",
       "max-video-preview": -1,
+      "noimageindex": false,
     },
   },
   alternates: {
@@ -75,6 +77,9 @@ export const metadata: Metadata = {
   other: {
     "google-site-verification": "googleef39532fea4ceb687",
     "og:image": "https://dgtechinfra.com/logo.svg",
+    "x-ua-compatible": "IE=edge",
+    "language": "English",
+    "revisit-after": "7 days",
   },
 };
 
