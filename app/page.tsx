@@ -655,7 +655,7 @@ export default function Home() {
                   <Phone className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Phone</p>
-                    <p className="text-gray-600">+91 9948146882</p>
+                    <p className="text-gray-600">+91 7396146882</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
