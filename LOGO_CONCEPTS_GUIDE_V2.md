@@ -132,7 +132,7 @@ All concepts use navy + gold and scale perfectly from 16px to 400px+.
 ```
 Website Header: dgtechinfra
 Tagline: Technology + Infrastructure Solutions
-Footer: © 2024 DHRITI Global Technologies & Infrastructure Pvt Ltd | dgtechinfra.com
+Footer: © 2026 DHRITI Global Technologies & Infrastructure Pvt Ltd | dgtechinfra.com
 Social Media: @dgtechinfra
 Email: hello@dgtechinfra.com
 ```
@@ -156,7 +156,7 @@ Tagline: "Technology + Infrastructure Solutions"
 **Footer**:
 ```
 Company: dgtechinfra by DHRITI Global
-Copyright: © 2024 DHRITI Global Technologies & Infrastructure Pvt Ltd
+Copyright: © 2026 DHRITI Global Technologies & Infrastructure Pvt Ltd
 ```
 
 **Social Media**:

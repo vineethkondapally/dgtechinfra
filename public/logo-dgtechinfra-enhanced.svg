@@ -1,0 +1,157 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" style="background: transparent;">
+    <defs>
+        <!-- Gradients for depth -->
+        <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+            <stop offset="0%" style="stop-color:#1a5a9a;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#0f4c81;stop-opacity:1" />
+        </linearGradient>
+        
+        <linearGradient id="orangeGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+            <stop offset="0%" style="stop-color:#f5a623;stop-opacity:1" />
+            <stop offset="100%" style="stop-color:#f28f1d;stop-opacity:1" />
+        </linearGradient>
+        
+        <!-- Glow effects -->
+        <filter id="glow">
+            <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+            <feMerge>
+                <feMergeNode in="coloredBlur"/>
+                <feMergeNode in="SourceGraphic"/>
+            </feMerge>
+        </filter>
+        
+        <filter id="shadowFilter" x="-50%" y="-50%" width="200%" height="200%">
+            <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+        </filter>
+        
+        <!-- Radial gradient for central light effect -->
+        <radialGradient id="centerLight" cx="50%" cy="30%" r="60%">
+            <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+            <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+        </radialGradient>
+    </defs>
+    
+    <style>
+        .brand-title { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 58px; fill: #0f4c81; text-anchor: middle; letter-spacing: -1.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+        .brand-sub { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; fill: #475569; text-anchor: middle; letter-spacing: 0.5px; }
+        .brand-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 18px; fill: #0f4c81; text-anchor: middle; letter-spacing: 1px; }
+        
+        /* Subtle animation for tech elements */
+        @keyframes pulse {
+            0%, 100% { opacity: 1; }
+            50% { opacity: 0.8; }
+        }
+        
+        .tech-pulse {
+            animation: pulse 3s ease-in-out infinite;
+        }
+    </style>
+    
+    <!-- Logo Emblem -->
+    <g transform="translate(50, 20)">
+        
+        <!-- Background light glow circle -->
+        <circle cx="250" cy="250" r="160" fill="url(#centerLight)" />
+        
+        <g id="EmblemSymbol" filter="url(#shadowFilter)">
+            <!-- Outer Spherical Tech Ring - Left Hemisphere (Primary Blue Color) -->
+            <!-- Outer glow for left hemisphere -->
+            <path d="M 230,100 C 145,100 100,165 100,250 C 100,335 145,400 230,400" 
+                  fill="none" stroke="url(#blueGradient)" stroke-width="14" stroke-linecap="round" opacity="0.3" />
+            
+            <path d="M 230,100 C 145,100 100,165 100,250 C 100,335 145,400 230,400" 
+                  fill="none" stroke="#0f4c81" stroke-width="12" stroke-linecap="round" filter="url(#glow)" />
+            
+            <!-- Intersecting tech network curves inside Left Hemisphere -->
+            <path d="M 105,210 C 145,225 175,200 220,160" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" class="tech-pulse" />
+            <path d="M 105,290 C 145,275 175,300 220,340" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+            <path d="M 150,135 C 195,170 195,220 180,270" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" class="tech-pulse" />
+            <path d="M 160,360 C 190,320 210,310 225,280" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+            
+            <!-- Outer Spherical Tech Ring - Right Hemisphere (Accent Orange Color) -->
+            <!-- Outer glow for right hemisphere -->
+            <path d="M 270,100 C 355,100 400,165 400,250 C 400,335 355,400 270,400" 
+                  fill="none" stroke="url(#orangeGradient)" stroke-width="14" stroke-linecap="round" opacity="0.3" />
+            
+            <path d="M 270,100 C 355,100 400,165 400,250 C 400,335 355,400 270,400" 
+                  fill="none" stroke="#f28f1d" stroke-width="12" stroke-linecap="round" filter="url(#glow)" />
+            
+            <!-- Intersecting structural curves inside Right Hemisphere -->
+            <path d="M 395,210 C 355,225 325,200 280,160" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+            <path d="M 395,290 C 355,275 325,300 280,340" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" class="tech-pulse" />
+            <path d="M 350,135 C 305,170 305,220 320,270" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" class="tech-pulse" />
+            <path d="M 340,360 C 310,320 290,310 275,280" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+
+            <!-- Dynamic Central Skyscraper & Tech Structure Interlocking -->
+            <!-- Central Main Pillar - Dark Blue (Structural Infrastructure) with gradient -->
+            <g>
+                <!-- Pillar shadow for depth -->
+                <path d="M 240,80 L 260,80 L 260,350 L 240,330 Z" fill="#0a3a66" opacity="0.3" />
+                
+                <!-- Main pillar with gradient -->
+                <path d="M 240,80 L 260,80 L 260,350 L 240,330 Z" fill="url(#blueGradient)" />
+                <path d="M 260,80 L 270,85 L 270,350 L 260,350 Z" fill="#0f4c81" opacity="0.85" />
+                
+                <!-- Subtle highlight on pillar -->
+                <path d="M 242,85 L 255,85 L 255,320 L 242,305 Z" fill="white" opacity="0.1" />
+            </g>
+            
+            <!-- Intersecting "T" Block Structure - Vibrant Orange (Technologies) -->
+            <!-- Angular crossbeam crossing the central pillar -->
+            <g>
+                <!-- Beam shadow -->
+                <path d="M 216,221 L 306,151 L 316,164 L 226,234 Z" fill="#d67000" opacity="0.2" />
+                
+                <!-- Main beam with gradient -->
+                <path d="M 215,220 L 305,150 L 315,163 L 225,233 Z" fill="url(#orangeGradient)" />
+                
+                <!-- Beam highlight -->
+                <path d="M 217,222 L 300,155 L 310,165 L 223,230 Z" fill="white" opacity="0.12" />
+            </g>
+            
+            <!-- Orange vertical secondary support post with depth -->
+            <g>
+                <!-- Post shadow -->
+                <path d="M 281,171 L 301,171 L 301,381 L 281,381 Z" fill="#d67000" opacity="0.2" />
+                
+                <!-- Main post with gradient -->
+                <path d="M 280,170 L 300,170 L 300,380 L 280,380 Z" fill="url(#orangeGradient)" />
+                
+                <!-- Depth bevels on post -->
+                <path d="M 300,170 L 308,175 L 308,380 L 300,380 Z" fill="#f28f1d" opacity="0.8" />
+                
+                <!-- Post highlight -->
+                <path d="M 282,172 L 298,172 L 298,375 L 282,375 Z" fill="white" opacity="0.08" />
+            </g>
+            
+            <!-- Connection element shadow -->
+            <path d="M 215,220 L 225,233 L 225,320 L 215,310 Z" fill="#0a3a66" opacity="0.15" />
+            <path d="M 215,220 L 225,233 L 225,320 L 215,310 Z" fill="#0f4c81" />
+            
+            <!-- Subtle connector line between elements -->
+            <line x1="250" y1="170" x2="250" y2="220" stroke="#f28f1d" stroke-width="1" opacity="0.4" stroke-dasharray="2 4" />
+            
+            <!-- Center connection point (tech node) -->
+            <circle cx="250" cy="220" r="3" fill="#f28f1d" opacity="0.6" />
+        </g>
+    </g>
+
+    <!-- Text Layout -->
+    <text x="300" y="495" class="brand-title">dgtechinfra</text>
+    
+    <!-- Decorative line above text -->
+    <line x1="180" y1="480" x2="420" y2="480" stroke="#f28f1d" stroke-width="2" opacity="0.3" />
+    
+    <!-- Custom multi-line parsing for long subtitles -->
+    <text x="300" y="540" class="brand-sub" fill="#475569">DHRITI GLOBAL TECHNOLOGIES AND</text>
+    <text x="300" y="565" class="brand-sub" fill="#475569">INFRASTRUCTURE PVT. LIMITED</text>
+
+    <!-- Decorative line below subtitle -->
+    <line x1="200" y1="580" x2="400" y2="580" stroke="#0f4c81" stroke-width="1.5" opacity="0.2" />
+    
+    <text x="300" y="625" class="brand-link">dgtechinfra.com</text>
+    
+    <!-- Corner accent dots for modern look -->
+    <circle cx="520" cy="650" r="2" fill="#f28f1d" opacity="0.4" />
+    <circle cx="80" cy="650" r="2" fill="#0f4c81" opacity="0.4" />
+</svg>

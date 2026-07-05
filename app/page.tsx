@@ -398,8 +398,7 @@ export default function Home() {
       {/* ============= SECTION 1: HERO ============= */}
       <section className="pt-32 pb-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-r from-slate-900 to-slate-800 text-white text-center">
         <div className="max-w-4xl mx-auto">
-          <h1 className="text-5xl md:text-6xl font-bold mb-2">dgtechinfra</h1>
-          <p className="text-2xl md:text-3xl font-semibold text-amber-400 mb-6">Powering Technology, Infrastructure & Industrial Growth</p>
+          <h1 className="text-5xl md:text-6xl font-bold mb-6">Powering Technology, Infrastructure & Industrial Growth</h1>
           <p className="text-xl md:text-2xl text-gray-300 mb-8">
             Integrated solutions across 15+ diverse sectors: Technology, Infrastructure, Manufacturing, Real Estate, Agriculture, Textiles, Food & Beverage, Retail, Trading, Wellness, Education, HR, Events, Consulting, and Finance.
           </p>
@@ -655,7 +654,7 @@ export default function Home() {
                   <Phone className="w-6 h-6 text-amber-600 flex-shrink-0 mt-1" />
                   <div>
                     <p className="font-bold text-slate-900 mb-1">Phone</p>
-                    <p className="text-gray-600">+91 7396146882</p>
+                    <p className="text-gray-600">+91 9948146882</p>
                   </div>
                 </div>
                 <div className="flex gap-4">
@@ -761,7 +760,7 @@ export default function Home() {
               <h4 className="font-bold text-white mb-4">Contact</h4>
               <div className="space-y-2 text-sm">
                 <p className="flex items-center gap-2"><MapPin className="w-4 h-4 text-amber-600" /> 5, Nehru Outer Ring Road Sambhupur, Dundigal, Hyderabad, Telangana 500043</p>
-                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber-600" /> +91 7396146882</p>
+                <p className="flex items-center gap-2"><Phone className="w-4 h-4 text-amber-600" /> +91 9948146882</p>
                 <p className="flex items-center gap-2"><Mail className="w-4 h-4 text-amber-600" /> contact@dgtechinfra.com</p>
               </div>
             </div>
@@ -769,7 +768,7 @@ export default function Home() {
 
           {/* Footer Bottom */}
           <div className="border-t border-slate-700 pt-8 text-center">
-            <p className="text-sm">&copy; 2024 DHRITI GLOBAL TECHNOLOGIES AND INFRASTRUCTURE PRIVATE LIMITED. All rights reserved.</p>
+            <p className="text-sm">&copy; 2026 DHRITI GLOBAL TECHNOLOGIES AND INFRASTRUCTURE PRIVATE LIMITED. All rights reserved.</p>
           </div>
         </div>
       </footer>

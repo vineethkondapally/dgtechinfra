@@ -29,7 +29,7 @@
   </text>
   
   <!-- Small tag underneath badge -->
-  <text x="24" y="52" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle" letter-spacing="1">
-    EST 2024
+    <text x="24" y="52" font-family="'Helvetica Neue', Arial, sans-serif" font-size="8" font-weight="600" fill="#FFD700" text-anchor="middle" letter-spacing="1">
+    EST 2026
   </text>
 </svg>
