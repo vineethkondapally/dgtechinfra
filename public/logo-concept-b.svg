@@ -1,0 +1,42 @@
+<svg width="240" height="60" viewBox="0 0 240 60" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="conceptBNavy" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT B: Abstract Connectivity Symbol (Infrastructure + Tech) -->
+  <!-- Three intersecting angular elements forming a tech/network concept -->
+  
+  <!-- Top-left diagonal (Navy) -->
+  <path d="M 8 14 L 18 6 L 22 10 L 12 18 Z" 
+        fill="url(#conceptBNavy)" stroke="none"/>
+  
+  <!-- Center vertical (Navy) -->
+  <path d="M 16 12 L 22 12 L 22 48 L 16 48 Z" 
+        fill="url(#conceptBNavy)" stroke="none"/>
+  
+  <!-- Bottom-right diagonal (Navy) -->
+  <path d="M 20 42 L 30 50 L 26 54 L 16 46 Z" 
+        fill="url(#conceptBNavy)" stroke="none"/>
+  
+  <!-- Gold accent connector (emphasizes intersection) -->
+  <circle cx="19" cy="30" r="4" fill="#FFD700" opacity="0.95"/>
+  
+  <!-- Horizontal connector (Gold) -->
+  <rect x="8" y="28" width="22" height="4" fill="#FFD700" opacity="0.85"/>
+  
+  <!-- Text: DHRITI GLOBAL -->
+  <text x="58" y="32" font-family="'Segoe UI', 'Arial', sans-serif" font-size="20" font-weight="700" fill="#001f4d" letter-spacing="-0.5">
+    DHRITI
+  </text>
+  <text x="58" y="48" font-family="'Segoe UI', 'Arial', sans-serif" font-size="12" font-weight="600" fill="#FFD700">
+    GLOBAL
+  </text>
+  
+  <!-- Tagline option -->
+  <text x="58" y="56" font-family="'Segoe UI', 'Arial', sans-serif" font-size="8" font-weight="500" fill="#5a7a8f" letter-spacing="0.5">
+    TECH &amp; INFRASTRUCTURE
+  </text>
+</svg>

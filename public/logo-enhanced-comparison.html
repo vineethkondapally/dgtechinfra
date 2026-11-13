@@ -1,0 +1,482 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGTechinfra Logo - Enhanced Version</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Plus+Jakarta+Sans:wght@600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #0f4c81 0%, #1a5a9a 50%, #f28f1d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            max-width: 1000px;
+            width: 100%;
+        }
+        
+        h1 {
+            color: #0f4c81;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            color: #f28f1d;
+            text-align: center;
+            margin-bottom: 40px;
+            font-size: 1.1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+        
+        .logo-card {
+            background: #f9f9f9;
+            border-radius: 15px;
+            padding: 25px;
+            border: 2px solid #e5e7eb;
+            transition: all 0.3s ease;
+        }
+        
+        .logo-card:hover {
+            border-color: #f28f1d;
+            box-shadow: 0 8px 20px rgba(242, 143, 29, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .logo-card h3 {
+            color: #0f4c81;
+            margin-bottom: 15px;
+            font-size: 1.1em;
+            text-align: center;
+            font-weight: 700;
+        }
+        
+        .logo-container {
+            background: white;
+            border-radius: 10px;
+            padding: 15px;
+            margin-bottom: 15px;
+            min-height: 250px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            border: 1px solid #e5e7eb;
+        }
+        
+        .logo-container svg {
+            max-width: 100%;
+            max-height: 100%;
+            width: auto;
+            height: auto;
+        }
+        
+        .features {
+            background: #f0f4f8;
+            padding: 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            color: #475569;
+            line-height: 1.6;
+        }
+        
+        .features ul {
+            list-style-position: inside;
+            margin: 0;
+        }
+        
+        .features li {
+            margin-bottom: 6px;
+        }
+        
+        .enhancement-section {
+            background: white;
+            border-radius: 15px;
+            padding: 30px;
+            margin-bottom: 30px;
+            border-left: 5px solid #f28f1d;
+        }
+        
+        .enhancement-section h2 {
+            color: #0f4c81;
+            margin-bottom: 20px;
+            font-size: 1.4em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .enhancements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+        }
+        
+        .enhancement-item {
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 3px solid #f28f1d;
+        }
+        
+        .enhancement-item h4 {
+            color: #0f4c81;
+            margin-bottom: 8px;
+            font-weight: 700;
+            font-size: 0.95em;
+        }
+        
+        .enhancement-item p {
+            color: #666;
+            font-size: 0.85em;
+            line-height: 1.5;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 25px;
+            flex-wrap: wrap;
+        }
+        
+        .color-box {
+            text-align: center;
+        }
+        
+        .color-swatch {
+            width: 80px;
+            height: 80px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            margin-bottom: 10px;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .color-label {
+            font-size: 0.85em;
+            color: #0f4c81;
+            font-weight: 600;
+            margin-bottom: 5px;
+        }
+        
+        .color-code {
+            font-size: 0.8em;
+            color: #999;
+            font-family: 'Courier New', monospace;
+        }
+        
+        .specs-section {
+            background: #f0f4f8;
+            border-radius: 15px;
+            padding: 25px;
+            margin-top: 30px;
+        }
+        
+        .specs-section h3 {
+            color: #0f4c81;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .spec-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+        
+        .spec-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #f28f1d;
+        }
+        
+        .spec-item strong {
+            color: #0f4c81;
+            display: block;
+            margin-bottom: 5px;
+        }
+        
+        .spec-item span {
+            color: #666;
+            font-size: 0.9em;
+        }
+        
+        @media (max-width: 768px) {
+            .comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.5em;
+            }
+            
+            .container {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>✨ DGTechinfra Logo - Enhanced Version</h1>
+        <p class="subtitle">Professional Premium Design with Advanced Effects</p>
+        
+        <div class="comparison">
+            <div class="logo-card">
+                <h3>Original Design</h3>
+                <div class="logo-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" style="background: transparent;">
+                        <style>
+                            .brand-title { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 58px; fill: #0f4c81; text-anchor: middle; letter-spacing: -1.5px; }
+                            .brand-sub { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; fill: #475569; text-anchor: middle; letter-spacing: 0.5px; }
+                            .brand-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 18px; fill: #0f4c81; text-anchor: middle; letter-spacing: 1px; }
+                        </style>
+                        
+                        <g transform="translate(50, 20)">
+                            <g id="EmblemSymbol">
+                                <path d="M 230,100 C 145,100 100,165 100,250 C 100,335 145,400 230,400" fill="none" stroke="#0f4c81" stroke-width="12" stroke-linecap="round" />
+                                <path d="M 105,210 C 145,225 175,200 220,160" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" />
+                                <path d="M 105,290 C 145,275 175,300 220,340" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 150,135 C 195,170 195,220 180,270" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 160,360 C 190,320 210,310 225,280" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 270,100 C 355,100 400,165 400,250 C 400,335 355,400 270,400" fill="none" stroke="#f28f1d" stroke-width="12" stroke-linecap="round" />
+                                <path d="M 395,210 C 355,225 325,200 280,160" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 395,290 C 355,275 325,300 280,340" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" />
+                                <path d="M 350,135 C 305,170 305,220 320,270" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 340,360 C 310,320 290,310 275,280" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 240,80 L 260,80 L 260,350 L 240,330 Z" fill="#0f4c81" />
+                                <path d="M 260,80 L 270,85 L 270,350 L 260,350 Z" fill="#0f4c81" opacity="0.85" />
+                                <path d="M 215,220 L 305,150 L 315,163 L 225,233 Z" fill="#f28f1d" />
+                                <path d="M 280,170 L 300,170 L 300,380 L 280,380 Z" fill="#f28f1d" />
+                                <path d="M 300,170 L 308,175 L 308,380 L 300,380 Z" fill="#f28f1d" opacity="0.8" />
+                                <path d="M 215,220 L 225,233 L 225,320 L 215,310 Z" fill="#0f4c81" />
+                            </g>
+                        </g>
+                        
+                        <text x="300" y="495" class="brand-title">dgtechinfra</text>
+                        <text x="300" y="540" class="brand-sub" fill="#475569">DHRITI GLOBAL TECHNOLOGIES AND</text>
+                        <text x="300" y="565" class="brand-sub" fill="#475569">INFRASTRUCTURE PVT. LIMITED</text>
+                        <text x="300" y="625" class="brand-link">dgtechinfra.com</text>
+                    </svg>
+                </div>
+                <div class="features">
+                    <ul>
+                        <li>✓ Clean geometric design</li>
+                        <li>✓ Tech-forward appearance</li>
+                        <li>✓ Infrastructure symbolism</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="logo-card">
+                <h3>Enhanced Version</h3>
+                <div class="logo-container">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" style="background: transparent;">
+                        <defs>
+                            <linearGradient id="blueGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                <stop offset="0%" style="stop-color:#1a5a9a;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#0f4c81;stop-opacity:1" />
+                            </linearGradient>
+                            <linearGradient id="orangeGradient" x1="100%" y1="0%" x2="0%" y2="100%">
+                                <stop offset="0%" style="stop-color:#f5a623;stop-opacity:1" />
+                                <stop offset="100%" style="stop-color:#f28f1d;stop-opacity:1" />
+                            </linearGradient>
+                            <filter id="glow">
+                                <feGaussianBlur stdDeviation="2" result="coloredBlur"/>
+                                <feMerge>
+                                    <feMergeNode in="coloredBlur"/>
+                                    <feMergeNode in="SourceGraphic"/>
+                                </feMerge>
+                            </filter>
+                            <filter id="shadowFilter" x="-50%" y="-50%" width="200%" height="200%">
+                                <feDropShadow dx="2" dy="3" stdDeviation="3" flood-opacity="0.15"/>
+                            </filter>
+                            <radialGradient id="centerLight" cx="50%" cy="30%" r="60%">
+                                <stop offset="0%" style="stop-color:#ffffff;stop-opacity:0.2" />
+                                <stop offset="100%" style="stop-color:#ffffff;stop-opacity:0" />
+                            </radialGradient>
+                        </defs>
+                        
+                        <style>
+                            .brand-title { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 58px; fill: #0f4c81; text-anchor: middle; letter-spacing: -1.5px; text-shadow: 0 2px 4px rgba(0,0,0,0.1); }
+                            .brand-sub { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; fill: #475569; text-anchor: middle; letter-spacing: 0.5px; }
+                            .brand-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 600; font-size: 18px; fill: #0f4c81; text-anchor: middle; letter-spacing: 1px; }
+                        </style>
+                        
+                        <g transform="translate(50, 20)">
+                            <circle cx="250" cy="250" r="160" fill="url(#centerLight)" />
+                            <g id="EmblemSymbol" filter="url(#shadowFilter)">
+                                <path d="M 230,100 C 145,100 100,165 100,250 C 100,335 145,400 230,400" fill="none" stroke="url(#blueGradient)" stroke-width="14" stroke-linecap="round" opacity="0.3" />
+                                <path d="M 230,100 C 145,100 100,165 100,250 C 100,335 145,400 230,400" fill="none" stroke="#0f4c81" stroke-width="12" stroke-linecap="round" filter="url(#glow)" />
+                                <path d="M 105,210 C 145,225 175,200 220,160" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" />
+                                <path d="M 105,290 C 145,275 175,300 220,340" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 150,135 C 195,170 195,220 180,270" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 160,360 C 190,320 210,310 225,280" fill="none" stroke="#0f4c81" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 270,100 C 355,100 400,165 400,250 C 400,335 355,400 270,400" fill="none" stroke="url(#orangeGradient)" stroke-width="14" stroke-linecap="round" opacity="0.3" />
+                                <path d="M 270,100 C 355,100 400,165 400,250 C 400,335 355,400 270,400" fill="none" stroke="#f28f1d" stroke-width="12" stroke-linecap="round" filter="url(#glow)" />
+                                <path d="M 395,210 C 355,225 325,200 280,160" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 395,290 C 355,275 325,300 280,340" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" stroke-dasharray="1 10" />
+                                <path d="M 350,135 C 305,170 305,220 320,270" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <path d="M 340,360 C 310,320 290,310 275,280" fill="none" stroke="#f28f1d" stroke-width="6" stroke-linecap="round" />
+                                <g>
+                                    <path d="M 240,80 L 260,80 L 260,350 L 240,330 Z" fill="#0a3a66" opacity="0.3" />
+                                    <path d="M 240,80 L 260,80 L 260,350 L 240,330 Z" fill="url(#blueGradient)" />
+                                    <path d="M 260,80 L 270,85 L 270,350 L 260,350 Z" fill="#0f4c81" opacity="0.85" />
+                                    <path d="M 242,85 L 255,85 L 255,320 L 242,305 Z" fill="white" opacity="0.1" />
+                                </g>
+                                <g>
+                                    <path d="M 216,221 L 306,151 L 316,164 L 226,234 Z" fill="#d67000" opacity="0.2" />
+                                    <path d="M 215,220 L 305,150 L 315,163 L 225,233 Z" fill="url(#orangeGradient)" />
+                                    <path d="M 217,222 L 300,155 L 310,165 L 223,230 Z" fill="white" opacity="0.12" />
+                                </g>
+                                <g>
+                                    <path d="M 281,171 L 301,171 L 301,381 L 281,381 Z" fill="#d67000" opacity="0.2" />
+                                    <path d="M 280,170 L 300,170 L 300,380 L 280,380 Z" fill="url(#orangeGradient)" />
+                                    <path d="M 300,170 L 308,175 L 308,380 L 300,380 Z" fill="#f28f1d" opacity="0.8" />
+                                    <path d="M 282,172 L 298,172 L 298,375 L 282,375 Z" fill="white" opacity="0.08" />
+                                </g>
+                                <path d="M 215,220 L 225,233 L 225,320 L 215,310 Z" fill="#0a3a66" opacity="0.15" />
+                                <path d="M 215,220 L 225,233 L 225,320 L 215,310 Z" fill="#0f4c81" />
+                                <line x1="250" y1="170" x2="250" y2="220" stroke="#f28f1d" stroke-width="1" opacity="0.4" stroke-dasharray="2 4" />
+                                <circle cx="250" cy="220" r="3" fill="#f28f1d" opacity="0.6" />
+                            </g>
+                        </g>
+                        
+                        <text x="300" y="495" class="brand-title">dgtechinfra</text>
+                        <line x1="180" y1="480" x2="420" y2="480" stroke="#f28f1d" stroke-width="2" opacity="0.3" />
+                        <text x="300" y="540" class="brand-sub" fill="#475569">DHRITI GLOBAL TECHNOLOGIES AND</text>
+                        <text x="300" y="565" class="brand-sub" fill="#475569">INFRASTRUCTURE PVT. LIMITED</text>
+                        <line x1="200" y1="580" x2="400" y2="580" stroke="#0f4c81" stroke-width="1.5" opacity="0.2" />
+                        <text x="300" y="625" class="brand-link">dgtechinfra.com</text>
+                        <circle cx="520" cy="650" r="2" fill="#f28f1d" opacity="0.4" />
+                        <circle cx="80" cy="650" r="2" fill="#0f4c81" opacity="0.4" />
+                    </svg>
+                </div>
+                <div class="features">
+                    <ul>
+                        <li>✓ Premium gradients</li>
+                        <li>✓ Glow effects</li>
+                        <li>✓ Enhanced depth & shadows</li>
+                        <li>✓ Decorative elements</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="enhancement-section">
+            <h2>🎨 Enhancements Added</h2>
+            <div class="enhancements-grid">
+                <div class="enhancement-item">
+                    <h4>Gradient Fills</h4>
+                    <p>Blue and orange gradients add depth and visual sophistication to the pillar and beam elements</p>
+                </div>
+                <div class="enhancement-item">
+                    <h4>Glow Effects</h4>
+                    <p>Subtle Gaussian blur creates a soft halo effect around outer rings, enhancing tech aesthetic</p>
+                </div>
+                <div class="enhancement-item">
+                    <h4>Shadow Depth</h4>
+                    <p>Drop shadows and opacity layers create 3D appearance and visual hierarchy</p>
+                </div>
+                <div class="enhancement-item">
+                    <h4>Highlight Details</h4>
+                    <p>White highlights on pillars add luminosity and premium feel to the design</p>
+                </div>
+                <div class="enhancement-item">
+                    <h4>Decorative Elements</h4>
+                    <p>Subtle lines and accent dots frame the typography elegantly</p>
+                </div>
+                <div class="enhancement-item">
+                    <h4>Center Light Effect</h4>
+                    <p>Radial gradient creates an ambient light source enhancing the emblem</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="specs-section">
+            <h3>📋 Design Specifications</h3>
+            <div class="spec-grid">
+                <div class="spec-item">
+                    <strong>Format:</strong>
+                    <span>SVG (Scalable)</span>
+                </div>
+                <div class="spec-item">
+                    <strong>ViewBox:</strong>
+                    <span>600 x 700px</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Color Model:</strong>
+                    <span>RGB + Gradients</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Font:</strong>
+                    <span>Montserrat, Plus Jakarta Sans</span>
+                </div>
+                <div class="spec-item">
+                    <strong>File:</strong>
+                    <span>logo-dgtechinfra-enhanced.svg</span>
+                </div>
+                <div class="spec-item">
+                    <strong>Status:</strong>
+                    <span>Production Ready</span>
+                </div>
+            </div>
+            
+            <div class="color-palette" style="margin-top: 30px;">
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #0f4c81;"></div>
+                    <div class="color-label">Primary Blue</div>
+                    <div class="color-code">#0f4c81</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #f28f1d;"></div>
+                    <div class="color-label">Accent Orange</div>
+                    <div class="color-code">#f28f1d</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #1a5a9a;"></div>
+                    <div class="color-label">Blue Gradient</div>
+                    <div class="color-code">#1a5a9a</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #f5a623;"></div>
+                    <div class="color-label">Orange Gradient</div>
+                    <div class="color-code">#f5a623</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #475569;"></div>
+                    <div class="color-label">Text Dark</div>
+                    <div class="color-code">#475569</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

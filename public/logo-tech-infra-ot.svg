@@ -1,0 +1,22 @@
+<svg viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+  <!-- Background -->
+  <circle cx="100" cy="100" r="95" fill="#f5f5f5" stroke="#0d3b66" stroke-width="2"/>
+  
+  <!-- Left Circle (Blue) -->
+  <circle cx="75" cy="100" r="32" fill="none" stroke="#0d3b66" stroke-width="3"/>
+  
+  <!-- Right Circle (Orange) -->
+  <circle cx="120" cy="100" r="32" fill="none" stroke="#ea8c2e" stroke-width="3"/>
+  
+  <!-- Overlap section -->
+  <ellipse cx="97.5" cy="100" rx="12" ry="32" fill="rgba(13, 59, 102, 0.15)"/>
+  
+  <!-- Letter O (Blue - in left circle) -->
+  <text x="65" y="115" font-size="48" font-weight="bold" fill="#0d3b66" text-anchor="middle" font-family="Arial, sans-serif">O</text>
+  
+  <!-- Letter T (Orange - in right circle) -->
+  <text x="130" y="115" font-size="48" font-weight="bold" fill="#ea8c2e" text-anchor="middle" font-family="Arial, sans-serif">T</text>
+  
+  <!-- Connecting line at top -->
+  <path d="M 75 68 Q 97.5 55 120 68" fill="none" stroke="#0d3b66" stroke-width="2" opacity="0.5"/>
+</svg>

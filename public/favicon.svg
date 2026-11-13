@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="80" height="80" viewBox="0 0 80 80" role="img" aria-labelledby="favicon-title">
+  <title id="favicon-title">DG techinfra</title>
+  <path d="M40 4 72 22.5v35L40 76 8 57.5v-35L40 4Z" fill="#102d3a" stroke="#c99a51" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M20 17h14c13 0 22 9 22 23s-9 23-22 23H20Z" fill="#fff"/>
+  <path d="M27 24v32h7c9 0 15-6 15-16S43 24 34 24Z" fill="#102d3a"/>
+  <path d="M39 40h23v10h-9" fill="none" stroke="#c99a51" stroke-linecap="square" stroke-linejoin="round" stroke-width="5.5"/>
+</svg>

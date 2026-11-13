@@ -1,0 +1,50 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="v2grad5" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 8: Puzzle Pieces Merging into Integration Hub -->
+  <!-- Represents: Comprehensive integrated solutions bringing sectors together -->
+  
+  <!-- Top-Left Puzzle Piece (Navy) -->
+  <rect x="4" y="4" width="10" height="10" fill="url(#v2grad5)"/>
+  <path d="M 10 10 L 13 10 L 13 14 L 10 14 Z" fill="url(#v2grad5)"/>
+  
+  <!-- Top-Right Puzzle Piece (Navy) -->
+  <rect x="22" y="4" width="10" height="10" fill="url(#v2grad5)"/>
+  <path d="M 22 10 L 19 10 L 19 14 L 22 14 Z" fill="url(#v2grad5)"/>
+  
+  <!-- Bottom-Left Puzzle Piece (Navy) -->
+  <rect x="4" y="22" width="10" height="10" fill="url(#v2grad5)"/>
+  <path d="M 10 22 L 13 22 L 13 18 L 10 18 Z" fill="url(#v2grad5)"/>
+  
+  <!-- Bottom-Right Puzzle Piece (Navy) -->
+  <rect x="22" y="22" width="10" height="10" fill="url(#v2grad5)"/>
+  <path d="M 22 22 L 19 22 L 19 18 L 22 18 Z" fill="url(#v2grad5)"/>
+  
+  <!-- Central Integration Hub (Gold) -->
+  <circle cx="18" cy="18" r="5" fill="#FFD700" opacity="0.95"/>
+  <circle cx="18" cy="18" r="3" fill="url(#v2grad5)"/>
+  
+  <!-- Connection lines (Gold) flowing to hub -->
+  <line x1="14" y1="9" x2="16" y2="16" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="22" y1="9" x2="20" y2="16" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="14" y1="27" x2="16" y2="20" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="22" y1="27" x2="20" y2="20" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  
+  <!-- Company Name: DG techinfra -->
+  <text x="68" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#001f4d">
+    DG
+  </text>
+  <text x="100" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#001f4d">
+    techinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="68" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="0.5">
+    Integrated Solutions
+  </text>
+</svg>

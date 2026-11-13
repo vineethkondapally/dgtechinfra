@@ -1,0 +1,34 @@
+import type { Metadata } from "next";
+
+export const metadata: Metadata = {
+  other: {
+    "schema:Organization": JSON.stringify({
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DG techinfra",
+      "alternateName": "dgtechinfra",
+      "url": "https://dgtechinfra.com",
+      "logo": "https://dgtechinfra.com/logo.svg",
+      "description": "Integrated solutions across 15+ diverse sectors",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "5, Nehru Outer Ring Road Sambhupur, Dundigal",
+        "addressLocality": "Hyderabad",
+        "addressRegion": "Telangana",
+        "postalCode": "500043",
+        "addressCountry": "IN"
+      },
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "contactType": "Customer Service",
+        "telephone": "+91-98480-05059",
+        "email": "connect@dgtechinfra.com"
+      },
+      "sameAs": [
+        "https://www.facebook.com/dgtechinfra",
+        "https://www.linkedin.com/company/dgtechinfra",
+        "https://twitter.com/dgtechinfra"
+      ]
+    })
+  }
+};

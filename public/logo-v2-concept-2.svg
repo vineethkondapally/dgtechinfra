@@ -1,0 +1,36 @@
+<svg width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="practicalGrad2" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 2: Ascending Data Waves + Building Foundation -->
+  <!-- Represents: Rising growth in tech + solid infrastructure foundation -->
+  
+  <!-- Solid Base/Foundation (Navy) -->
+  <rect x="6" y="26" width="36" height="8" fill="url(#practicalGrad2)"/>
+  
+  <!-- Rising Data Waves -->
+  <path d="M 8 26 Q 12 20 16 26" stroke="url(#practicalGrad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 14 26 Q 18 18 22 26" stroke="url(#practicalGrad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 20 26 Q 24 16 28 26" stroke="url(#practicalGrad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  <path d="M 26 26 Q 30 20 34 26" stroke="url(#practicalGrad2)" stroke-width="3" fill="none" stroke-linecap="round"/>
+  
+  <!-- Gold accent - Rising trend indicator -->
+  <polyline points="10,25 16,16 22,18 28,12 34,15" stroke="#FFD700" stroke-width="2.5" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- Top accent dot (represents pinnacle/success) -->
+  <circle cx="28" cy="12" r="2.5" fill="#FFD700"/>
+  
+  <!-- Company Name: dgtechinfra -->
+  <text x="52" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#001f4d" letter-spacing="-0.8">
+    dgtechinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="52" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#5a7a8f" letter-spacing="0.5">
+    GROWTH INFRASTRUCTURE SOLUTIONS
+  </text>
+</svg>

@@ -1,0 +1,32 @@
+<svg width="320" height="80" viewBox="0 0 320 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="corp15grad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 15: Hexagon Badge Premium -->
+  <!-- Represents: Structured, modern, premium -->
+  
+  <!-- Hexagon shape (Navy) -->
+  <polygon points="24,8 38,16 38,32 24,40 10,32 10,16" fill="url(#corp15grad)"/>
+  
+  <!-- Inner hexagon (Gold accent) -->
+  <polygon points="24,12 35,18 35,30 24,36 13,30 13,18" fill="none" stroke="#FFD700" stroke-width="1" opacity="0.6"/>
+  
+  <!-- DG Text inside hexagon -->
+  <text x="24" y="32" font-family="'Helvetica Neue', Arial, sans-serif" font-size="16" font-weight="800" fill="white" text-anchor="middle" letter-spacing="-0.5">
+    DG
+  </text>
+  
+  <!-- Company Name: DGtechinfra (NO SPACE) -->
+  <text x="48" y="42" font-family="'Helvetica Neue', Arial, sans-serif" font-size="32" font-weight="700" fill="#001f4d" letter-spacing="-1.2">
+    techinfra
+  </text>
+  
+  <!-- Tagline: Connecting Solutions -->
+  <text x="48" y="60" font-family="'Helvetica Neue', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="0.5">
+    CONNECTING SOLUTIONS
+  </text>
+</svg>

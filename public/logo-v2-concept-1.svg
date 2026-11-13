@@ -1,0 +1,46 @@
+<svg width="280" height="70" viewBox="0 0 280 70" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="practicalGrad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 1: Tech Circuit + Building Grid (Merged) -->
+  <!-- Represents: Integration of technology (circuits) and infrastructure (building grid) -->
+  
+  <!-- Building Grid Foundation (Navy) -->
+  <rect x="8" y="8" width="8" height="8" fill="url(#practicalGrad1)"/>
+  <rect x="18" y="8" width="8" height="8" fill="url(#practicalGrad1)"/>
+  <rect x="28" y="8" width="8" height="8" fill="url(#practicalGrad1)"/>
+  
+  <rect x="8" y="18" width="8" height="8" fill="url(#practicalGrad1)"/>
+  <rect x="18" y="18" width="8" height="8" fill="url(#practicalGrad1)" opacity="0.6"/>
+  <rect x="28" y="18" width="8" height="8" fill="url(#practicalGrad1)"/>
+  
+  <rect x="8" y="28" width="8" height="8" fill="url(#practicalGrad1)"/>
+  <rect x="18" y="28" width="8" height="8" fill="url(#practicalGrad1)"/>
+  <rect x="28" y="28" width="8" height="8" fill="url(#practicalGrad1)"/>
+  
+  <!-- Tech Circuit Lines (Gold overlays) -->
+  <line x1="12" y1="12" x2="24" y2="12" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="12" x2="24" y2="22" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="24" y1="22" x2="12" y2="22" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  <line x1="12" y1="22" x2="12" y2="32" stroke="#FFD700" stroke-width="2" stroke-linecap="round"/>
+  
+  <!-- Connection nodes (Gold dots) -->
+  <circle cx="12" cy="12" r="2" fill="#FFD700"/>
+  <circle cx="24" cy="12" r="2" fill="#FFD700"/>
+  <circle cx="24" cy="22" r="2" fill="#FFD700"/>
+  <circle cx="12" cy="32" r="2" fill="#FFD700"/>
+  
+  <!-- Company Name: dgtechinfra -->
+  <text x="52" y="28" font-family="'Segoe UI', Arial, sans-serif" font-size="24" font-weight="700" fill="#001f4d" letter-spacing="-0.8">
+    dgtechinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="52" y="50" font-family="'Segoe UI', Arial, sans-serif" font-size="10" font-weight="600" fill="#5a7a8f" letter-spacing="0.5">
+    TECHNOLOGY + INFRASTRUCTURE
+  </text>
+</svg>

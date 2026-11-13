@@ -1,0 +1,48 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="v2grad6" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 9: Building Silhouette with Digital Overlay -->
+  <!-- Represents: Physical infrastructure enhanced by technology -->
+  
+  <!-- Building silhouette (Navy) -->
+  <polygon points="6,24 6,40 10,40 10,28 14,28 14,40 18,40 18,24" fill="url(#v2grad6)"/>
+  <polygon points="22,20 22,40 26,40 26,24 30,24 30,40 34,40 34,20" fill="url(#v2grad6)"/>
+  
+  <!-- Windows in buildings (Navy borders) -->
+  <rect x="7" y="30" width="2" height="2" fill="none" stroke="#FFD700" stroke-width="0.5"/>
+  <rect x="12" y="30" width="2" height="2" fill="none" stroke="#FFD700" stroke-width="0.5"/>
+  <rect x="23" y="26" width="2" height="2" fill="none" stroke="#FFD700" stroke-width="0.5"/>
+  <rect x="28" y="26" width="2" height="2" fill="none" stroke="#FFD700" stroke-width="0.5"/>
+  
+  <!-- Digital cloud/tech overlay (Gold lines) -->
+  <path d="M 8 18 Q 12 14 18 16 Q 20 12 24 14 Q 28 12 30 16" 
+        stroke="#FFD700" stroke-width="2" fill="none" stroke-linecap="round"/>
+  
+  <!-- Tech nodes (Gold dots) -->
+  <circle cx="8" cy="18" r="1.5" fill="#FFD700"/>
+  <circle cx="18" cy="16" r="1.5" fill="#FFD700"/>
+  <circle cx="24" cy="14" r="1.5" fill="#FFD700"/>
+  <circle cx="30" cy="16" r="1.5" fill="#FFD700"/>
+  
+  <!-- Connection down to buildings (Gold) -->
+  <line x1="14" y1="20" x2="14" y2="24" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  <line x1="26" y1="20" x2="26" y2="24" stroke="#FFD700" stroke-width="1.5" opacity="0.7" stroke-linecap="round"/>
+  
+  <!-- Company Name: DG techinfra -->
+  <text x="68" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#001f4d">
+    DG
+  </text>
+  <text x="100" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#001f4d">
+    techinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="68" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="0.5">
+    Smart Infrastructure
+  </text>
+</svg>

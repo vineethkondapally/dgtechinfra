@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="440" height="88" viewBox="0 0 440 88" role="img" aria-labelledby="logo-title logo-description">
+  <title id="logo-title">DG techinfra</title>
+  <desc id="logo-description">A shared D and G monogram inside a structural hexagon.</desc>
+  <path d="M44 7 76 25.5v37L44 81 12 62.5v-37L44 7Z" fill="#102d3a" stroke="#c99a51" stroke-linejoin="round" stroke-width="3"/>
+  <path d="M24 20h13c13 0 22 9 22 22s-9 22-22 22H24Z" fill="#fff"/>
+  <path d="M31 27v30h6c9 0 15-6 15-15s-6-15-15-15Z" fill="#102d3a"/>
+  <path d="M42 42h21v10h-9" fill="none" stroke="#c99a51" stroke-linecap="square" stroke-linejoin="round" stroke-width="5.5"/>
+  <text x="81" y="55" fill="#102d3a" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="700" letter-spacing="-1.5">DG</text>
+  <text x="136" y="55" fill="#102d3a" font-family="Arial, Helvetica, sans-serif" font-size="36" font-weight="500" letter-spacing="-1.2">techinfra</text>
+</svg>

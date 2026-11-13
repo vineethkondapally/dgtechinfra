@@ -1,0 +1,43 @@
+<svg width="300" height="80" viewBox="0 0 300 80" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <linearGradient id="v2grad1" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" style="stop-color:#001f4d;stop-opacity:1" />
+      <stop offset="100%" style="stop-color:#0a3f7f;stop-opacity:1" />
+    </linearGradient>
+  </defs>
+  
+  <!-- CONCEPT 4: Ascending Building Blocks with Cloud -->
+  <!-- Represents: Infrastructure foundation rising to cloud/tech solutions -->
+  
+  <!-- Base Foundation Blocks (Navy) -->
+  <rect x="8" y="38" width="10" height="10" fill="url(#v2grad1)"/>
+  <rect x="20" y="28" width="10" height="10" fill="url(#v2grad1)"/>
+  <rect x="32" y="18" width="10" height="10" fill="url(#v2grad1)"/>
+  <rect x="44" y="8" width="10" height="10" fill="url(#v2grad1)"/>
+  
+  <!-- Cloud shape above blocks (Navy) -->
+  <path d="M 38 4 Q 35 0 30 0 Q 28 0 28 3 Q 24 2 22 6 Q 18 5 18 10 Q 14 10 14 14 L 50 14 Q 50 8 45 4 Z" 
+        fill="url(#v2grad1)"/>
+  
+  <!-- Gold accent - connection arrow flowing upward -->
+  <polyline points="14,42 24,32 36,22 50,10" stroke="#FFD700" stroke-width="3" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <polygon points="50,10 48,14 53,13" fill="#FFD700"/>
+  
+  <!-- Connecting dots (Gold) -->
+  <circle cx="14" cy="42" r="1.5" fill="#FFD700"/>
+  <circle cx="24" cy="32" r="1.5" fill="#FFD700"/>
+  <circle cx="36" cy="22" r="1.5" fill="#FFD700"/>
+  
+  <!-- Company Name: DG techinfra -->
+  <text x="68" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="700" fill="#001f4d">
+    DG
+  </text>
+  <text x="100" y="35" font-family="'Segoe UI', Arial, sans-serif" font-size="22" font-weight="600" fill="#001f4d">
+    techinfra
+  </text>
+  
+  <!-- Tagline -->
+  <text x="68" y="55" font-family="'Segoe UI', Arial, sans-serif" font-size="11" font-weight="600" fill="#FFD700" letter-spacing="0.5">
+    Infrastructure to Cloud
+  </text>
+</svg>

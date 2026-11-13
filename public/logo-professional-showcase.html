@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DGTechinfra Logo - Professional Design</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800&family=Plus+Jakarta+Sans:wght@500;600;700&display=swap" rel="stylesheet">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background: linear-gradient(135deg, #1a4d7a 0%, #2a6fa0 50%, #f28f1d 100%);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        
+        .container {
+            background: white;
+            border-radius: 20px;
+            padding: 50px 40px;
+            box-shadow: 0 20px 80px rgba(0, 0, 0, 0.3);
+            max-width: 900px;
+            width: 100%;
+        }
+        
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+        
+        h1 {
+            color: #1a4d7a;
+            font-size: 2.2em;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .subtitle {
+            color: #f28f1d;
+            font-size: 1em;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+        
+        .logo-showcase {
+            background: linear-gradient(135deg, #f5f5f5 0%, #fafafa 100%);
+            border-radius: 15px;
+            padding: 40px;
+            margin-bottom: 40px;
+            text-align: center;
+            border: 2px solid #e5e7eb;
+            min-height: 500px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .logo-showcase svg {
+            max-width: 100%;
+            max-height: 600px;
+            width: auto;
+            height: auto;
+            filter: drop-shadow(0 10px 30px rgba(0, 0, 0, 0.1));
+        }
+        
+        .design-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .feature-card {
+            background: white;
+            border: 2px solid #e5e7eb;
+            border-radius: 12px;
+            padding: 20px;
+            text-align: center;
+            transition: all 0.3s ease;
+        }
+        
+        .feature-card:hover {
+            border-color: #f28f1d;
+            box-shadow: 0 8px 20px rgba(242, 143, 29, 0.15);
+            transform: translateY(-3px);
+        }
+        
+        .feature-icon {
+            font-size: 2em;
+            margin-bottom: 10px;
+        }
+        
+        .feature-card h3 {
+            color: #1a4d7a;
+            font-size: 1em;
+            margin-bottom: 8px;
+            font-weight: 700;
+        }
+        
+        .feature-card p {
+            color: #666;
+            font-size: 0.9em;
+            line-height: 1.5;
+        }
+        
+        .improvements-section {
+            background: #f0f4f8;
+            border-left: 5px solid #f28f1d;
+            border-radius: 10px;
+            padding: 25px;
+            margin-bottom: 30px;
+        }
+        
+        .improvements-section h2 {
+            color: #1a4d7a;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .improvements-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+        
+        .improvement-item {
+            background: white;
+            padding: 12px;
+            border-radius: 8px;
+            border-left: 3px solid #f28f1d;
+            font-size: 0.95em;
+            color: #333;
+            line-height: 1.6;
+        }
+        
+        .improvement-item strong {
+            color: #1a4d7a;
+        }
+        
+        .color-specs {
+            background: white;
+            border-radius: 15px;
+            padding: 25px;
+            margin-bottom: 30px;
+            border: 2px solid #e5e7eb;
+        }
+        
+        .color-specs h3 {
+            color: #1a4d7a;
+            margin-bottom: 20px;
+            font-size: 1.1em;
+            font-weight: 700;
+        }
+        
+        .color-palette {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-bottom: 20px;
+        }
+        
+        .color-box {
+            text-align: center;
+        }
+        
+        .color-swatch {
+            width: 90px;
+            height: 90px;
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+            margin-bottom: 10px;
+            border: 3px solid white;
+            cursor: pointer;
+            transition: transform 0.2s ease;
+        }
+        
+        .color-swatch:hover {
+            transform: scale(1.05);
+        }
+        
+        .color-label {
+            font-size: 0.9em;
+            color: #1a4d7a;
+            font-weight: 700;
+            margin-bottom: 5px;
+        }
+        
+        .color-code {
+            font-size: 0.85em;
+            color: #999;
+            font-family: 'Courier New', monospace;
+            font-weight: 600;
+        }
+        
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 12px;
+            background: #f9f9f9;
+            padding: 15px;
+            border-radius: 8px;
+        }
+        
+        .spec {
+            background: white;
+            padding: 10px;
+            border-radius: 6px;
+            text-align: center;
+        }
+        
+        .spec strong {
+            color: #1a4d7a;
+            display: block;
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+        
+        .spec span {
+            color: #666;
+            font-size: 0.85em;
+        }
+        
+        .cta-section {
+            background: linear-gradient(135deg, #1a4d7a 0%, #2a6fa0 100%);
+            color: white;
+            border-radius: 15px;
+            padding: 30px;
+            text-align: center;
+            margin-top: 30px;
+        }
+        
+        .cta-section h3 {
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 800;
+        }
+        
+        .cta-section p {
+            font-size: 0.95em;
+            margin-bottom: 15px;
+            opacity: 0.95;
+        }
+        
+        .file-path {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 6px;
+            font-family: 'Courier New', monospace;
+            display: inline-block;
+            font-size: 0.9em;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        
+        @media (max-width: 768px) {
+            .improvements-list {
+                grid-template-columns: 1fr;
+            }
+            
+            h1 {
+                font-size: 1.6em;
+            }
+            
+            .container {
+                padding: 25px;
+            }
+            
+            .logo-showcase {
+                min-height: 400px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>✨ Professional Logo Design</h1>
+            <p class="subtitle">Based on PNG Reference - Solid Shapes Approach</p>
+        </div>
+        
+        <div class="logo-showcase">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 700" width="100%" height="100%" style="background: transparent;">
+                <defs>
+                    <style>
+                        .brand-title { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 800; font-size: 58px; fill: #1a4d7a; text-anchor: middle; letter-spacing: -1px; }
+                        .brand-sub { font-family: 'Montserrat', 'Plus Jakarta Sans', sans-serif; font-weight: 700; font-size: 14px; fill: #333333; text-anchor: middle; letter-spacing: 0.5px; }
+                        .brand-link { font-family: 'Plus Jakarta Sans', sans-serif; font-weight: 500; font-size: 16px; fill: #1a4d7a; text-anchor: middle; letter-spacing: 0.5px; }
+                    </style>
+                </defs>
+                
+                <!-- Main Circular Container -->
+                <g transform="translate(300, 150)">
+                    <!-- Outer Circle Background -->
+                    <circle cx="0" cy="0" r="110" fill="none" stroke="#f0f0f0" stroke-width="1"/>
+                    
+                    <!-- LEFT HEMISPHERE (BLUE - GLOBE/TECHNOLOGY) -->
+                    <g>
+                        <!-- Left outer circle arc -->
+                        <path d="M 0,-110 A 110,110 0 0,0 0,110 L -10,100 A 100,100 0 0,1 0,-100 Z" fill="#1a4d7a" opacity="0.15"/>
+                        
+                        <!-- Curved leaf shape - top left -->
+                        <path d="M -30,-80 Q -60,-60 -70,-20 Q -60,-40 -35,-65 Z" fill="#1a4d7a"/>
+                        
+                        <!-- Curved wave - middle left -->
+                        <path d="M -50,-10 Q -80,0 -85,40 Q -75,20 -45,5 Z" fill="#1a4d7a"/>
+                        
+                        <!-- Building structure - left side -->
+                        <path d="M -25,-40 L -10,-50 L -5,-30 L -20,-25 Z" fill="#1a4d7a"/>
+                        <path d="M -35,0 L -15,-10 L -12,20 L -32,15 Z" fill="#1a4d7a"/>
+                        
+                        <!-- Globe line segments -->
+                        <path d="M -35,-75 Q -45,-45 -40,-10" fill="none" stroke="#1a4d7a" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M -15,-85 Q -30,-60 -32,0" fill="none" stroke="#1a4d7a" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                    </g>
+                    
+                    <!-- RIGHT HEMISPHERE (ORANGE - INFRASTRUCTURE) -->
+                    <g>
+                        <!-- Right outer circle arc -->
+                        <path d="M 0,-110 A 110,110 0 0,1 0,110 L 10,100 A 100,100 0 0,0 0,-100 Z" fill="#f28f1d" opacity="0.15"/>
+                        
+                        <!-- Building tower 1 - top right -->
+                        <path d="M 20,-60 L 45,-45 L 40,-10 L 15,-25 Z" fill="#f28f1d"/>
+                        
+                        <!-- Building tower 2 - middle right -->
+                        <path d="M 50,-30 L 75,-15 L 70,35 L 45,25 Z" fill="#f28f1d"/>
+                        
+                        <!-- Curved structure - bottom right -->
+                        <path d="M 30,30 Q 65,45 80,70 Q 70,50 40,35 Z" fill="#f28f1d"/>
+                        
+                        <!-- Accent triangle -->
+                        <path d="M 60,-50 L 85,-35 L 75,-55 Z" fill="#f28f1d" opacity="0.9"/>
+                        
+                        <!-- Infrastructure curves -->
+                        <path d="M 35,-70 Q 55,-55 70,-20" fill="none" stroke="#f28f1d" stroke-width="4" stroke-linecap="round" opacity="0.4"/>
+                        <path d="M 55,-75 Q 70,-50 75,10" fill="none" stroke="#f28f1d" stroke-width="3" stroke-linecap="round" opacity="0.5"/>
+                    </g>
+                    
+                    <!-- CENTER GEOMETRIC ELEMENTS -->
+                    <g>
+                        <!-- Center vertical pillar -->
+                        <path d="M -8,-90 L 8,-90 L 5,70 L -5,70 Z" fill="#1a4d7a"/>
+                        
+                        <!-- Horizontal bridge element -->
+                        <path d="M -70,-5 L 70,15 L 65,35 L -65,15 Z" fill="#f28f1d"/>
+                        
+                        <!-- Connecting nodes -->
+                        <circle cx="-8" cy="-20" r="4" fill="#f28f1d"/>
+                        <circle cx="8" cy="20" r="4" fill="#1a4d7a"/>
+                        <circle cx="0" cy="5" r="3" fill="#1a4d7a" opacity="0.6"/>
+                    </g>
+                    
+                    <!-- OUTER DECORATIVE RING -->
+                    <circle cx="0" cy="0" r="110" fill="none" stroke="#1a4d7a" stroke-width="3" opacity="0.3"/>
+                    <circle cx="0" cy="0" r="105" fill="none" stroke="#f28f1d" stroke-width="2" opacity="0.2"/>
+                </g>
+                
+                <!-- TEXT SECTION -->
+                <text x="300" y="500" class="brand-title">dgtechinfra</text>
+                
+                <!-- Divider line -->
+                <line x1="150" y1="520" x2="450" y2="520" stroke="#f28f1d" stroke-width="2" opacity="0.4"/>
+                
+                <!-- Subtitle -->
+                <text x="300" y="560" class="brand-sub">DHRITI GLOBAL TECHNOLOGIES AND</text>
+                <text x="300" y="585" class="brand-sub">INFRASTRUCTURE PVT. LIMITED</text>
+                
+                <!-- Divider line -->
+                <line x1="180" y1="603" x2="420" y2="603" stroke="#1a4d7a" stroke-width="1" opacity="0.2"/>
+                
+                <!-- Website -->
+                <text x="300" y="645" class="brand-link">dgtechinfra.com</text>
+            </svg>
+        </div>
+        
+        <div class="design-features">
+            <div class="feature-card">
+                <div class="feature-icon">🎯</div>
+                <h3>Solid Shapes</h3>
+                <p>Uses filled polygons instead of strokes for bold, professional look</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">🌍</div>
+                <h3>Dual Symbolism</h3>
+                <p>Blue globe represents technology, Orange represents infrastructure</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">📐</div>
+                <h3>Geometric Clarity</h3>
+                <p>Clean, recognizable shapes that scale perfectly at any size</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon">✨</div>
+                <h3>Professional Polish</h3>
+                <p>Strategic color placement and subtle opacity effects</p>
+            </div>
+        </div>
+        
+        <div class="improvements-section">
+            <h2>Why This Approach Works Better</h2>
+            <div class="improvements-list">
+                <div class="improvement-item">
+                    <strong>✓ Instant Recognition</strong><br/>
+                    Solid shapes create immediate visual impact
+                </div>
+                <div class="improvement-item">
+                    <strong>✓ Professional Appearance</strong><br/>
+                    Looks like a polished brand, not technical documentation
+                </div>
+                <div class="improvement-item">
+                    <strong>✓ Better Scalability</strong><br/>
+                    Remains sharp and readable at any size
+                </div>
+                <div class="improvement-item">
+                    <strong>✓ Strong Icon Mark</strong><br/>
+                    Functions as memorable brand symbol
+                </div>
+                <div class="improvement-item">
+                    <strong>✓ Color Hierarchy</strong><br/>
+                    Clear differentiation between brand elements
+                </div>
+                <div class="improvement-item">
+                    <strong>✓ Modern Design</strong><br/>
+                    Contemporary aesthetic matching PNG reference
+                </div>
+            </div>
+        </div>
+        
+        <div class="color-specs">
+            <h3>🎨 Color Palette</h3>
+            <div class="color-palette">
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #1a4d7a;"></div>
+                    <div class="color-label">Primary Blue</div>
+                    <div class="color-code">#1a4d7a</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #f28f1d;"></div>
+                    <div class="color-label">Accent Orange</div>
+                    <div class="color-code">#f28f1d</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #333333;"></div>
+                    <div class="color-label">Text Dark</div>
+                    <div class="color-code">#333333</div>
+                </div>
+                <div class="color-box">
+                    <div class="color-swatch" style="background-color: #2a6fa0;"></div>
+                    <div class="color-label">Secondary Blue</div>
+                    <div class="color-code">#2a6fa0</div>
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 25px; margin-bottom: 15px;">📋 Technical Specs</h3>
+            <div class="specs-grid">
+                <div class="spec">
+                    <strong>Format</strong>
+                    <span>SVG</span>
+                </div>
+                <div class="spec">
+                    <strong>ViewBox</strong>
+                    <span>600 x 700px</span>
+                </div>
+                <div class="spec">
+                    <strong>Scalability</strong>
+                    <span>∞ Infinite</span>
+                </div>
+                <div class="spec">
+                    <strong>File Size</strong>
+                    <span>~12KB</span>
+                </div>
+                <div class="spec">
+                    <strong>Color Mode</strong>
+                    <span>RGB</span>
+                </div>
+                <div class="spec">
+                    <strong>Status</strong>
+                    <span>✓ Ready</span>
+                </div>
+            </div>
+        </div>
+        
+        <div class="cta-section">
+            <h3>Ready to Deploy</h3>
+            <p>This logo is saved and ready to integrate into your website</p>
+            <div class="file-path">public/logo-dgtechinfra-professional.svg</div>
+        </div>
+    </div>
+</body>
+</html>

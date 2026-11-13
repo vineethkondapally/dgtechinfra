@@ -1,0 +1,62 @@
+# See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
+
+# dependencies
+/node_modules
+/.pnp
+.pnp.*
+.yarn/*
+!.yarn/patches
+!.yarn/plugins
+!.yarn/releases
+!.yarn/versions
+
+# testing
+/coverage
+
+# next.js
+/.next/
+/out/
+
+# production
+/build
+
+# misc
+.DS_Store
+*.pem
+
+# debug
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+.pnpm-debug.log*
+
+# env files (can opt-in for committing if needed)
+.env*
+!.env.example
+!.env.local.example
+
+# vercel
+.vercel
+
+# typescript
+*.tsbuildinfo
+next-env.d.ts
+
+# Test and temporary files
+test-email*.js
+test-*.js
+
+# Documentation/Setup files (development only)
+DEPLOYMENT_GUIDE.md
+
+# Deployment package folders (not needed in git, built locally)
+Files\ to\ upload/
+Files\ to\ upload-*/
+Files\ to\ upload*.zip
+HOSTING_GUIDE.md
+QUICK_START.md
+README_PROJECT.md
+START_HERE.txt
+DELIVERY_SUMMARY.txt
+DEPLOYMENT_CHECKLIST.md
+
