@@ -51,6 +51,8 @@ Hostinger will ask: "Deploy from GitHub or upload files?"
   - This will auto-deploy when you push to GitHub!
 ```
 
+The Hostinger build runner installs production dependencies only. The project keeps the TypeScript compiler and type packages in `dependencies` so `npm run build` can complete there; the build script uses Webpack to avoid the Turbopack worker failure seen in Hostinger's build environment.
+
 **Option B: Upload Files Manually**
 ```
 Upload contents from your "Files to upload" folder:
