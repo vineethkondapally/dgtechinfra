@@ -199,6 +199,26 @@ const capabilities = [
   },
 ];
 
+function FooterLogo() {
+  return (
+    <svg
+      className="brand-logo"
+      viewBox="0 0 440 88"
+      role="img"
+      aria-labelledby="footer-logo-title footer-logo-description"
+    >
+      <title id="footer-logo-title">DG techinfra</title>
+      <desc id="footer-logo-description">A shared D and G monogram inside a structural hexagon.</desc>
+      <path d="M44 7 76 25.5v37L44 81 12 62.5v-37L44 7Z" fill="#163a49" stroke="#c99a51" strokeLinejoin="round" strokeWidth="3" />
+      <path d="M24 20h13c13 0 22 9 22 22s-9 22-22 22H24Z" fill="#fff" />
+      <path d="M31 27v30h6c9 0 15-6 15-15s-6-15-15-15Z" fill="#163a49" />
+      <path d="M42 42h21v10h-9" fill="none" stroke="#c99a51" strokeLinecap="square" strokeLinejoin="round" strokeWidth="5.5" />
+      <text x="81" y="55" fill="#fff" fontFamily="Arial, Helvetica, sans-serif" fontSize="36" fontWeight="700" letterSpacing="-1.5">DG</text>
+      <text x="136" y="55" fill="#fff" fontFamily="Arial, Helvetica, sans-serif" fontSize="36" fontWeight="500" letterSpacing="-1.2">techinfra</text>
+    </svg>
+  );
+}
+
 export default function Home() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [selectedIndustry, setSelectedIndustry] = useState<Industry | null>(null);
@@ -440,7 +460,7 @@ export default function Home() {
         <div className="footer-main section-wrap">
           <div className="footer-brand-block">
             <a className="brand brand-footer" href="#" aria-label="DG techinfra home">
-              <Image className="brand-logo" src="/logo-inverse.svg?v=23" alt="DG techinfra" width={440} height={88} unoptimized />
+              <FooterLogo />
             </a>
             <p>Integrated technology, infrastructure and industrial solutions—connected by one team.</p>
           </div>
