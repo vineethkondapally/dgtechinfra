@@ -1,0 +1,91 @@
+name: WhatsApp notifications
+
+on:
+  workflow_run:
+    workflows:
+      - CI
+    types:
+      - completed
+    branches:
+      - main
+  workflow_dispatch:
+
+permissions: {}
+
+jobs:
+  notify:
+    name: Send repository update
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.workflow_run.event == 'push' &&
+       github.event.workflow_run.head_branch == 'main')
+    runs-on: ubuntu-latest
+    steps:
+      - name: Send WhatsApp template message
+        env:
+          META_WA_CREDENTIAL: ${{ secrets.META_WA_CREDENTIAL }}
+          META_WA_PHONE_NUMBER_ID: ${{ secrets.META_WA_PHONE_NUMBER_ID }}
+          META_WA_RECIPIENT: ${{ secrets.META_WA_RECIPIENT }}
+          UPDATE_TITLE: ${{ github.event.workflow_run.head_commit.message || 'Manual WhatsApp test' }}
+          UPDATE_BRANCH: ${{ github.event.workflow_run.head_branch || github.ref_name }}
+          UPDATE_ACTOR: ${{ github.event.workflow_run.actor.login || github.actor }}
+          UPDATE_RESULT: ${{ github.event.workflow_run.conclusion || 'manual test' }}
+          UPDATE_SHA: ${{ github.event.workflow_run.head_sha || github.sha }}
+        run: |
+          if [ -z "${META_WA_CREDENTIAL:-}" ] || \
+             [ -z "${META_WA_PHONE_NUMBER_ID:-}" ] || \
+             [ -z "${META_WA_RECIPIENT:-}" ]; then
+            echo "::notice::WhatsApp secrets are not configured; no message was sent."
+            exit 0
+          fi
+
+          change_title="$(printf '%s\n' "$UPDATE_TITLE" | sed -n '1p' | cut -c1-160)"
+          short_sha="$(printf '%s' "$UPDATE_SHA" | cut -c1-7)"
+          commit_url="https://github.com/${GITHUB_REPOSITORY}/commit/${UPDATE_SHA}"
+
+          payload="$(jq -n \
+            --arg recipient "$META_WA_RECIPIENT" \
+            --arg change "$change_title" \
+            --arg branch "$UPDATE_BRANCH" \
+            --arg actor "$UPDATE_ACTOR" \
+            --arg result "$UPDATE_RESULT" \
+            --arg sha "$short_sha" \
+            --arg url "$commit_url" \
+            '{
+              messaging_product: "whatsapp",
+              recipient_type: "individual",
+              to: $recipient,
+              type: "template",
+              template: {
+                name: "dgtechinfra_code_update",
+                language: { code: "en_US" },
+                components: [{
+                  type: "body",
+                  parameters: [
+                    { type: "text", text: $change },
+                    { type: "text", text: $branch },
+                    { type: "text", text: $actor },
+                    { type: "text", text: $result },
+                    { type: "text", text: $sha },
+                    { type: "text", text: $url }
+                  ]
+                }]
+              }
+            }')"
+
+          response_file="$(mktemp)"
+          trap 'rm -f "$response_file"' EXIT
+
+          if http_code="$(curl --silent --show-error --fail-with-body \
+            --request POST \
+            --header "Authorization: Bearer ${META_WA_CREDENTIAL}" \
+            --header "Content-Type: application/json" \
+            --data "$payload" \
+            --output "$response_file" \
+            --write-out '%{http_code}' \
+            "https://graph.facebook.com/v27.0/${META_WA_PHONE_NUMBER_ID}/messages")"; then
+            echo "WhatsApp accepted the notification (HTTP ${http_code})."
+          else
+            echo "::error::WhatsApp API request failed (HTTP ${http_code:-unknown}); response body was suppressed to avoid logging recipient data."
+            exit 1
+          fi
